@@ -1,0 +1,26 @@
+----------------------------------
+-- Library Declaration --
+----------------------------------
+-- Like any other programming language, we should declare libraries
+library ieee;
+use ieee.std_logic_1164.all;
+----------------------------------
+-- Entity Declaration --
+----------------------------------
+-- Here we specify all input/output ports
+entity SWtoLED is
+	port(
+		
+		sw : in std_logic_vector(1 downto 0);
+		led : out std_logic_vector(1 downto 0)
+		
+);
+end SWtoLED;
+----------------------------------
+-- Architecture Declaration --
+----------------------------------
+-- here we put the description code of the design
+architecture dataflow of SWtoLED is
+begin
+led <= not(sw);
+end dataflow;

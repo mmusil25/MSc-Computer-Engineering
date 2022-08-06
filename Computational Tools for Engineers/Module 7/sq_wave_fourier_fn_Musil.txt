@@ -1,0 +1,70 @@
+function [] = sq_wave_fourier_fn_Musil(frequency, Time, N)
+%SQ_WAVE_FOURIER_FN_MUSIL 
+%
+%  sq_wave_fourier_fn_Musil.m
+%
+%  EE 5003
+%  [Mark Musil]
+%  [January 17 2022]
+%
+%  Produce a Fourier Series approximation of an even square wave but do so
+%  using FOR loops and IF-ELSE statements in a suboptimal, non-vectorized
+%  program structure.
+
+tic
+
+% Specify frequency of the square wave in Hz and radians
+freq = frequency;
+omega = 2*pi*freq;
+N = N;
+% Specify start time, time increment and end time of simulation
+tstart = -2;  tstep = 0.001;  tstop = Time;
+
+% Specify the total number of terms in the approximation
+
+% Loop over the number of terms to compute the coefficients
+% [loop variable is n]
+for n = 1:N;
+   % If n is odd, then check two other conditions
+   if rem(n,2) > 0
+        % IF n is 3, 7, 11, ..., then coefficient is -4/(n*pi)
+        if rem((n-1),4) > 1
+            a(n) = -4/(n*pi);
+        % Else n is 1, 5, 9, ..., and coefficient is 4/(n*pi)
+        else
+            a(n) = 4/(n*pi);%%INSERT EXPRESSION FOR COEFFICIENT HERE
+        end
+   % ELSE n is even so the coefficient is zero
+   else
+       a(n) = 0;
+   end
+end
+% End loop over the number of terms
+
+% Loop over time to compute the square wave approximation at each time
+% point
+k = 0;
+for t = tstart:tstep:tstop
+    k = k + 1;
+    f(k) = 0;
+    % Loop over the total number of terms in the approximation
+    for n = 1:N
+        f(k) = f(k) + a(n)*cos(n*t);%%INSERT EXPRESSION FOR n-th FOURIER TERM AT TIME t
+        time(k) = t;
+    end
+end
+% End loop over time
+
+toc
+
+% Plot the results
+plot(time,f)
+title(strcat('Fourier Series Approximation with N = ',num2str(N),' terms'))
+ylabel('function value')
+xlabel('time (seconds)')
+
+
+
+
+end
+

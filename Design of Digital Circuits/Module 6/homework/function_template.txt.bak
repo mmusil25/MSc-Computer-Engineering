@@ -1,0 +1,13 @@
+-- https://vhdlwhiz.com/function/
+
+
+function i2std 
+
+[pure|impure] function <function_name> (<parameter1_name> : <parameter1_type> := <default_value>;
+                                        <parameter2_name> : <parameter2_type> := <default_value>;
+                                        ... ) return <return_type> is
+    <constant_or_variable_declaration>
+begin
+    <code_performed_by_the_function>
+    return <value>
+end function;

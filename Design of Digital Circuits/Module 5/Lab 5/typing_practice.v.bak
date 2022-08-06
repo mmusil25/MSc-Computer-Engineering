@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+entity CountingLEDs is 
+	port(
+		clk_50MHz: in std_logic;
+		reset_btn: in std_logic;
+		green_leds: out std_logic_vector ( 7 downto 0)
+		);
+end CountingLEDs;
+
+
+architecture 

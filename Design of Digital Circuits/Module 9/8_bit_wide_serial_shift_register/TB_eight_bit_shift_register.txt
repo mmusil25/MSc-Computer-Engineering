@@ -1,0 +1,60 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity TB_eight_bit_shift_register is
+end entity;
+
+
+architecture behavioral of TB_eight_bit_shift_register is
+
+signal TB_clock: std_logic := '0';
+signal TB_serial_in: std_logic := '0';
+signal TB_serial_out: std_logic;
+
+
+component D_eight_bit_SR port (
+		clk: in std_logic;
+		serial_in: in std_logic;
+		serial_out: out std_logic
+		); 
+end component;
+
+begin
+
+	DUT: D_eight_bit_SR port map(
+		clk => TB_clock,
+		serial_in => TB_serial_in,
+		serial_out => TB_serial_out
+		);
+		
+	
+	clock_process: process
+	
+	begin
+		TB_clock <= '0';
+		wait for 5 ns;
+		TB_clock <='1';
+		wait for 5 ns;
+	end process;
+	
+	test_stimuli: process
+	begin
+		TB_serial_in <= '1';
+		wait for 10 ns;
+		TB_serial_in <= '0';
+		wait for 10 ns;
+		TB_serial_in <= '1';
+		wait for 10 ns;
+		TB_serial_in <= '0';
+		wait for 10 ns;
+		TB_serial_in <= '1';
+		wait for 10 ns;
+		TB_serial_in <= '0';
+		wait for 10 ns;
+		TB_serial_in <= '1';
+		wait for 10 ns;
+		TB_serial_in <= '0';
+		wait for 10 ns;
+	end process;
+
+end behavioral;

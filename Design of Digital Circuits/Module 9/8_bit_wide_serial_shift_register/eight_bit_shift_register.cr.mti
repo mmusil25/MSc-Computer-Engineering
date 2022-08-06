@@ -1,0 +1,25 @@
+{C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/eight_bit_shift_register.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/eight_bit_shift_register.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity eight_bit_shift_register
+-- Compiling architecture behavioral of eight_bit_shift_register
+
+} {} {}} {C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/TB_eight_bit_shift_register.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/TB_eight_bit_shift_register.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TB_eight_bit_shift_register
+-- Compiling architecture behavioral of TB_eight_bit_shift_register
+
+} {} {}} {C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/D_FLIP_FLOP.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/D_FLIP_FLOP.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity D_FLIP_FLOP
+-- Compiling architecture behavioral of D_FLIP_FLOP
+
+} {} {}}

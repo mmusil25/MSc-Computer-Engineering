@@ -1,0 +1,36 @@
+|Blinker_m4
+clk_50MHz => \clock_1hz_process:pulse.CLK
+clk_50MHz => \clock_1hz_process:scaler[0].CLK
+clk_50MHz => \clock_1hz_process:scaler[1].CLK
+clk_50MHz => \clock_1hz_process:scaler[2].CLK
+clk_50MHz => \clock_1hz_process:scaler[3].CLK
+clk_50MHz => \clock_1hz_process:scaler[4].CLK
+clk_50MHz => \clock_1hz_process:scaler[5].CLK
+clk_50MHz => \clock_1hz_process:scaler[6].CLK
+clk_50MHz => \clock_1hz_process:scaler[7].CLK
+clk_50MHz => \clock_1hz_process:scaler[8].CLK
+clk_50MHz => \clock_1hz_process:scaler[9].CLK
+clk_50MHz => \clock_1hz_process:scaler[10].CLK
+clk_50MHz => \clock_1hz_process:scaler[11].CLK
+clk_50MHz => \clock_1hz_process:scaler[12].CLK
+clk_50MHz => \clock_1hz_process:scaler[13].CLK
+clk_50MHz => \clock_1hz_process:scaler[14].CLK
+clk_50MHz => \clock_1hz_process:scaler[15].CLK
+clk_50MHz => \clock_1hz_process:scaler[16].CLK
+clk_50MHz => \clock_1hz_process:scaler[17].CLK
+clk_50MHz => \clock_1hz_process:scaler[18].CLK
+clk_50MHz => \clock_1hz_process:scaler[19].CLK
+clk_50MHz => \clock_1hz_process:scaler[20].CLK
+clk_50MHz => \clock_1hz_process:scaler[21].CLK
+clk_50MHz => \clock_1hz_process:scaler[22].CLK
+clk_50MHz => \clock_1hz_process:scaler[23].CLK
+clk_50MHz => \clock_1hz_process:scaler[24].CLK
+clk_50MHz => \clock_1hz_process:scaler[25].CLK
+clk_50MHz => \clock_1hz_process:scaler[26].CLK
+clk_50MHz => \clock_1hz_process:scaler[27].CLK
+clk_50MHz => \clock_1hz_process:scaler[28].CLK
+clk_50MHz => \clock_1hz_process:scaler[29].CLK
+clk_50MHz => \clock_1hz_process:scaler[30].CLK
+tick_out <= \clock_1hz_process:pulse.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1/ModelSimFolder
+Ehourgenerator
+Z0 w1650387992
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Final Project/Code/HourGenerator
+Z5 8C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Final Project/Code/HourGenerator/HourGenerator.vhd
+Z6 FC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Final Project/Code/HourGenerator/HourGenerator.vhd
+l0
+L5
+V0FlHbfmINF01iaN:DTbjE3
+!s100 3GCP_6NV_Yh3z3aXjo1L=3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1650388538
+!i10b 1
+Z9 !s108 1650388537.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Final Project/Code/HourGenerator/HourGenerator.vhd|
+Z11 !s107 C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Final Project/Code/HourGenerator/HourGenerator.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R1
+R2
+R3
+Z14 DEx4 work 13 hourgenerator 0 22 0FlHbfmINF01iaN:DTbjE3
+l16
+L12
+Z15 VNAfT3oFjSjPz4FXAi3RH<3
+Z16 !s100 Y@?B1Ff4:ZKPBB1jP[YJi3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etb_hourgenerator
+Z17 w1650388533
+R1
+R2
+R3
+R4
+Z18 8C:\Users\musil\OneDrive - Ohio University\First Year\Winter\Design of Digital Circuits\Final Project\Code\HourGenerator\TB_HourGenerator.vhd
+Z19 FC:\Users\musil\OneDrive - Ohio University\First Year\Winter\Design of Digital Circuits\Final Project\Code\HourGenerator\TB_HourGenerator.vhd
+l0
+L5
+V:b19dcN2n9`Lm`B^mFjQ13
+!s100 z5Qml_AS<mA4lPKPeHACB3
+R7
+32
+Z20 !s110 1650388537
+!i10b 1
+R9
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\musil\OneDrive - Ohio University\First Year\Winter\Design of Digital Circuits\Final Project\Code\HourGenerator\TB_HourGenerator.vhd|
+Z22 !s107 C:\Users\musil\OneDrive - Ohio University\First Year\Winter\Design of Digital Circuits\Final Project\Code\HourGenerator\TB_HourGenerator.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 16 tb_hourgenerator 0 22 :b19dcN2n9`Lm`B^mFjQ13
+l19
+L8
+VFPi?OED6z`gJfJjA:`Zf01
+!s100 3zHUOLZ`eOPgT3hdzmzgK0
+R7
+32
+R20
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13

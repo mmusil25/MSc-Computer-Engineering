@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hour[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hour[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hour[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hour[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hour[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hour[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hour_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

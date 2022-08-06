@@ -1,0 +1,40 @@
+-- Library declaration
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- Entity declaration
+
+entity BlinkerTest is
+	port(
+			clk_10MHz: in std_logic;
+			clk_out: out std_logic
+			);
+end entity
+
+architecture behave of BlinkerTest is
+
+-- Signal declaration
+
+signal clk_1Hz: std_logic := '0';
+signal scaler: integer range 0 to 5000000;
+
+begin
+
+-- Process used to scale down the 10 MHz frequency from the PLL to a 1Hz rate. 
+
+clk_1Hz_process: process(clk_10MHz)
+begin
+	if(rising_edge(clk_10MHz)) then
+			if (scaler  < 5000000) then
+			`	scaler <= scaler + 1;
+			else scaler <= 0;
+			clk_1Hz <= NOT(clk_1Hz);
+			end if;
+		end if;
+	end process clk_1Hz_process;
+	
+clk_out <= clk_1Hz;
+
+end behave;

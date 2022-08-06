@@ -1,0 +1,1171 @@
+Timing Analyzer report for BlinkerTest
+Tue Feb 15 21:13:01 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk_10MHz'
+ 13. Slow 1200mV 85C Model Hold: 'clk_10MHz'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk_10MHz'
+ 22. Slow 1200mV 0C Model Hold: 'clk_10MHz'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk_10MHz'
+ 30. Fast 1200mV 0C Model Hold: 'clk_10MHz'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; BlinkerTest                                         ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE22F17C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 32          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.06        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.4%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; clk_10MHz  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_10MHz } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 239.52 MHz ; 239.52 MHz      ; clk_10MHz  ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-----------+--------+----------------+
+; Clock     ; Slack  ; End Point TNS  ;
++-----------+--------+----------------+
+; clk_10MHz ; -3.175 ; -124.314       ;
++-----------+--------+----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-----------+-------+----------------+
+; Clock     ; Slack ; End Point TNS  ;
++-----------+-------+----------------+
+; clk_10MHz ; 0.344 ; 0.000          ;
++-----------+-------+----------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-----------+--------+------------------------------+
+; Clock     ; Slack  ; End Point TNS                ;
++-----------+--------+------------------------------+
+; clk_10MHz ; -3.000 ; -51.000                      ;
++-----------+--------+------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk_10MHz'                                                                             ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -3.175 ; second_scaler[6]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.108      ;
+; -3.175 ; second_scaler[6]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.108      ;
+; -3.175 ; second_scaler[6]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.108      ;
+; -3.175 ; second_scaler[6]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.108      ;
+; -3.175 ; second_scaler[6]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.108      ;
+; -3.167 ; second_scaler[5]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.100      ;
+; -3.167 ; second_scaler[5]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.100      ;
+; -3.167 ; second_scaler[5]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.100      ;
+; -3.167 ; second_scaler[5]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.100      ;
+; -3.167 ; second_scaler[5]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 4.100      ;
+; -3.142 ; second_scaler[10] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.427     ; 3.710      ;
+; -3.142 ; second_scaler[10] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.427     ; 3.710      ;
+; -3.142 ; second_scaler[10] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.427     ; 3.710      ;
+; -3.142 ; second_scaler[10] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.427     ; 3.710      ;
+; -3.142 ; second_scaler[10] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.427     ; 3.710      ;
+; -3.047 ; second_scaler[8]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.980      ;
+; -3.047 ; second_scaler[8]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.980      ;
+; -3.047 ; second_scaler[8]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.980      ;
+; -3.047 ; second_scaler[8]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.980      ;
+; -3.047 ; second_scaler[8]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.980      ;
+; -2.957 ; second_scaler[7]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.890      ;
+; -2.957 ; second_scaler[7]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.890      ;
+; -2.957 ; second_scaler[7]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.890      ;
+; -2.957 ; second_scaler[7]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.890      ;
+; -2.957 ; second_scaler[7]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.890      ;
+; -2.872 ; second_scaler[9]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.805      ;
+; -2.872 ; second_scaler[9]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.805      ;
+; -2.872 ; second_scaler[9]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.805      ;
+; -2.872 ; second_scaler[9]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.805      ;
+; -2.872 ; second_scaler[9]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.805      ;
+; -2.858 ; second_scaler[14] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.423      ;
+; -2.858 ; second_scaler[14] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.423      ;
+; -2.858 ; second_scaler[14] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.423      ;
+; -2.858 ; second_scaler[14] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.423      ;
+; -2.858 ; second_scaler[14] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.423      ;
+; -2.824 ; second_scaler[6]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.108      ;
+; -2.824 ; second_scaler[6]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.108      ;
+; -2.824 ; second_scaler[6]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.108      ;
+; -2.824 ; second_scaler[6]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.108      ;
+; -2.824 ; second_scaler[6]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.108      ;
+; -2.824 ; second_scaler[6]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.108      ;
+; -2.816 ; second_scaler[5]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.100      ;
+; -2.816 ; second_scaler[5]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.100      ;
+; -2.816 ; second_scaler[5]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.100      ;
+; -2.816 ; second_scaler[5]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.100      ;
+; -2.816 ; second_scaler[5]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.100      ;
+; -2.816 ; second_scaler[5]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 4.100      ;
+; -2.791 ; second_scaler[10] ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.076     ; 3.710      ;
+; -2.791 ; second_scaler[10] ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.076     ; 3.710      ;
+; -2.791 ; second_scaler[10] ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.076     ; 3.710      ;
+; -2.791 ; second_scaler[10] ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.076     ; 3.710      ;
+; -2.791 ; second_scaler[10] ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.076     ; 3.710      ;
+; -2.791 ; second_scaler[10] ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.076     ; 3.710      ;
+; -2.734 ; second_scaler[13] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.299      ;
+; -2.734 ; second_scaler[13] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.299      ;
+; -2.734 ; second_scaler[13] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.299      ;
+; -2.734 ; second_scaler[13] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.299      ;
+; -2.734 ; second_scaler[13] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.299      ;
+; -2.718 ; scaler[21]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.718 ; scaler[21]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.651      ;
+; -2.696 ; second_scaler[8]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.980      ;
+; -2.696 ; second_scaler[8]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.980      ;
+; -2.696 ; second_scaler[8]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.980      ;
+; -2.696 ; second_scaler[8]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.980      ;
+; -2.696 ; second_scaler[8]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.980      ;
+; -2.696 ; second_scaler[8]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.980      ;
+; -2.682 ; scaler[16]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.682 ; scaler[16]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.615      ;
+; -2.606 ; second_scaler[7]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.890      ;
+; -2.606 ; second_scaler[7]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.890      ;
+; -2.606 ; second_scaler[7]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.890      ;
+; -2.606 ; second_scaler[7]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.890      ;
+; -2.606 ; second_scaler[7]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.890      ;
+; -2.606 ; second_scaler[7]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.289      ; 3.890      ;
+; -2.601 ; second_scaler[11] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.166      ;
+; -2.601 ; second_scaler[11] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.166      ;
+; -2.601 ; second_scaler[11] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.166      ;
+; -2.601 ; second_scaler[11] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.166      ;
+; -2.601 ; second_scaler[11] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.430     ; 3.166      ;
+; -2.596 ; scaler[13]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.062     ; 3.529      ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk_10MHz'                                                                             ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 0.344 ; clk_out~reg0      ; clk_out~reg0      ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.577      ;
+; 0.344 ; clk_1Hz           ; clk_1Hz           ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.577      ;
+; 0.358 ; clk_2Hz           ; clk_2Hz           ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.577      ;
+; 0.376 ; second_scaler[21] ; second_scaler[21] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.610      ;
+; 0.468 ; second_scaler[9]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.427      ; 1.052      ;
+; 0.482 ; second_scaler[8]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.427      ; 1.066      ;
+; 0.535 ; second_scaler[1]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.768      ;
+; 0.538 ; second_scaler[3]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.771      ;
+; 0.540 ; second_scaler[2]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.773      ;
+; 0.540 ; second_scaler[4]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.773      ;
+; 0.542 ; second_scaler[11] ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.776      ;
+; 0.543 ; second_scaler[17] ; second_scaler[17] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.777      ;
+; 0.543 ; second_scaler[10] ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.776      ;
+; 0.544 ; second_scaler[16] ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.778      ;
+; 0.545 ; second_scaler[15] ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.779      ;
+; 0.546 ; second_scaler[19] ; second_scaler[19] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.780      ;
+; 0.550 ; scaler[1]         ; scaler[1]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.768      ;
+; 0.553 ; scaler[3]         ; scaler[3]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.771      ;
+; 0.553 ; scaler[5]         ; scaler[5]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.771      ;
+; 0.554 ; second_scaler[0]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 0.787      ;
+; 0.555 ; scaler[2]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.773      ;
+; 0.555 ; scaler[4]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.773      ;
+; 0.556 ; second_scaler[13] ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.790      ;
+; 0.557 ; second_scaler[8]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.776      ;
+; 0.558 ; scaler[6]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.776      ;
+; 0.558 ; scaler[8]         ; scaler[8]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.776      ;
+; 0.559 ; second_scaler[9]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.778      ;
+; 0.559 ; scaler[9]         ; scaler[9]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.777      ;
+; 0.559 ; scaler[15]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.778      ;
+; 0.559 ; scaler[16]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.778      ;
+; 0.560 ; second_scaler[18] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.794      ;
+; 0.560 ; scaler[7]         ; scaler[7]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.778      ;
+; 0.561 ; scaler[19]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.780      ;
+; 0.563 ; scaler[18]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.782      ;
+; 0.569 ; scaler[0]         ; scaler[0]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.787      ;
+; 0.569 ; scaler[11]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.788      ;
+; 0.570 ; scaler[10]        ; scaler[10]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 0.788      ;
+; 0.570 ; scaler[20]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; scaler[14]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; scaler[17]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.789      ;
+; 0.571 ; scaler[13]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.790      ;
+; 0.572 ; scaler[12]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.791      ;
+; 0.573 ; scaler[22]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.792      ;
+; 0.575 ; second_scaler[9]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.162      ;
+; 0.577 ; second_scaler[9]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.164      ;
+; 0.581 ; scaler[21]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.800      ;
+; 0.589 ; second_scaler[8]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.176      ;
+; 0.591 ; second_scaler[8]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.178      ;
+; 0.687 ; second_scaler[9]  ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.274      ;
+; 0.688 ; second_scaler[14] ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.922      ;
+; 0.689 ; second_scaler[9]  ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.276      ;
+; 0.690 ; second_scaler[20] ; second_scaler[20] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.924      ;
+; 0.701 ; second_scaler[8]  ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.288      ;
+; 0.703 ; second_scaler[8]  ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.290      ;
+; 0.706 ; second_scaler[6]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.925      ;
+; 0.706 ; second_scaler[7]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.925      ;
+; 0.708 ; second_scaler[5]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 0.927      ;
+; 0.716 ; second_scaler[12] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 0.950      ;
+; 0.728 ; second_scaler[7]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.427      ; 1.312      ;
+; 0.742 ; second_scaler[6]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.427      ; 1.326      ;
+; 0.799 ; second_scaler[9]  ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.386      ;
+; 0.801 ; second_scaler[9]  ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.388      ;
+; 0.810 ; second_scaler[1]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 1.043      ;
+; 0.812 ; second_scaler[3]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 1.045      ;
+; 0.813 ; second_scaler[8]  ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.400      ;
+; 0.815 ; second_scaler[8]  ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.402      ;
+; 0.816 ; second_scaler[11] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 1.050      ;
+; 0.818 ; second_scaler[17] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 1.052      ;
+; 0.819 ; second_scaler[15] ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 1.053      ;
+; 0.820 ; second_scaler[19] ; second_scaler[20] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 1.054      ;
+; 0.824 ; second_scaler[0]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 1.057      ;
+; 0.825 ; scaler[1]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.043      ;
+; 0.826 ; second_scaler[0]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 1.059      ;
+; 0.827 ; scaler[3]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.045      ;
+; 0.827 ; scaler[5]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.045      ;
+; 0.827 ; second_scaler[2]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 1.060      ;
+; 0.828 ; second_scaler[10] ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.079      ; 1.064      ;
+; 0.829 ; second_scaler[2]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.076      ; 1.062      ;
+; 0.830 ; second_scaler[10] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.079      ; 1.066      ;
+; 0.830 ; second_scaler[13] ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 1.064      ;
+; 0.832 ; second_scaler[16] ; second_scaler[17] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 1.066      ;
+; 0.833 ; scaler[15]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 1.052      ;
+; 0.833 ; scaler[9]         ; scaler[10]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.051      ;
+; 0.834 ; scaler[7]         ; scaler[8]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.052      ;
+; 0.834 ; second_scaler[16] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.077      ; 1.068      ;
+; 0.835 ; scaler[19]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 1.054      ;
+; 0.835 ; second_scaler[7]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.422      ;
+; 0.837 ; second_scaler[7]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.430      ; 1.424      ;
+; 0.839 ; scaler[0]         ; scaler[1]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.057      ;
+; 0.841 ; scaler[0]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.059      ;
+; 0.842 ; scaler[2]         ; scaler[3]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.060      ;
+; 0.842 ; scaler[4]         ; scaler[5]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.060      ;
+; 0.842 ; second_scaler[5]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.427      ; 1.426      ;
+; 0.843 ; scaler[11]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 1.062      ;
+; 0.844 ; scaler[2]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.062      ;
+; 0.844 ; scaler[4]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.062      ;
+; 0.845 ; scaler[17]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 1.064      ;
+; 0.845 ; scaler[13]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 1.064      ;
+; 0.845 ; second_scaler[8]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.062      ; 1.064      ;
+; 0.846 ; scaler[8]         ; scaler[9]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.061      ; 1.064      ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 265.25 MHz ; 250.0 MHz       ; clk_10MHz  ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_10MHz ; -2.770 ; -108.153      ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_10MHz ; 0.299 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; clk_10MHz ; -3.000 ; -51.000                     ;
++-----------+--------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk_10MHz'                                                                              ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -2.770 ; second_scaler[5]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.711      ;
+; -2.770 ; second_scaler[5]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.711      ;
+; -2.770 ; second_scaler[5]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.711      ;
+; -2.770 ; second_scaler[5]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.711      ;
+; -2.770 ; second_scaler[5]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.711      ;
+; -2.766 ; second_scaler[6]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.707      ;
+; -2.766 ; second_scaler[6]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.707      ;
+; -2.766 ; second_scaler[6]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.707      ;
+; -2.766 ; second_scaler[6]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.707      ;
+; -2.766 ; second_scaler[6]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.707      ;
+; -2.738 ; second_scaler[10] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.381     ; 3.352      ;
+; -2.738 ; second_scaler[10] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.381     ; 3.352      ;
+; -2.738 ; second_scaler[10] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.381     ; 3.352      ;
+; -2.738 ; second_scaler[10] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.381     ; 3.352      ;
+; -2.738 ; second_scaler[10] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.381     ; 3.352      ;
+; -2.664 ; second_scaler[8]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.605      ;
+; -2.664 ; second_scaler[8]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.605      ;
+; -2.664 ; second_scaler[8]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.605      ;
+; -2.664 ; second_scaler[8]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.605      ;
+; -2.664 ; second_scaler[8]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.605      ;
+; -2.579 ; second_scaler[7]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.520      ;
+; -2.579 ; second_scaler[7]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.520      ;
+; -2.579 ; second_scaler[7]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.520      ;
+; -2.579 ; second_scaler[7]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.520      ;
+; -2.579 ; second_scaler[7]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.520      ;
+; -2.489 ; second_scaler[9]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.430      ;
+; -2.489 ; second_scaler[9]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.430      ;
+; -2.489 ; second_scaler[9]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.430      ;
+; -2.489 ; second_scaler[9]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.430      ;
+; -2.489 ; second_scaler[9]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.430      ;
+; -2.459 ; second_scaler[14] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 3.071      ;
+; -2.459 ; second_scaler[14] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 3.071      ;
+; -2.459 ; second_scaler[14] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 3.071      ;
+; -2.459 ; second_scaler[14] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 3.071      ;
+; -2.459 ; second_scaler[14] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 3.071      ;
+; -2.456 ; second_scaler[5]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.711      ;
+; -2.456 ; second_scaler[5]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.711      ;
+; -2.456 ; second_scaler[5]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.711      ;
+; -2.456 ; second_scaler[5]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.711      ;
+; -2.456 ; second_scaler[5]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.711      ;
+; -2.456 ; second_scaler[5]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.711      ;
+; -2.452 ; second_scaler[6]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.707      ;
+; -2.452 ; second_scaler[6]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.707      ;
+; -2.452 ; second_scaler[6]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.707      ;
+; -2.452 ; second_scaler[6]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.707      ;
+; -2.452 ; second_scaler[6]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.707      ;
+; -2.452 ; second_scaler[6]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.707      ;
+; -2.424 ; second_scaler[10] ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.067     ; 3.352      ;
+; -2.424 ; second_scaler[10] ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.067     ; 3.352      ;
+; -2.424 ; second_scaler[10] ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.067     ; 3.352      ;
+; -2.424 ; second_scaler[10] ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.067     ; 3.352      ;
+; -2.424 ; second_scaler[10] ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.067     ; 3.352      ;
+; -2.424 ; second_scaler[10] ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.067     ; 3.352      ;
+; -2.379 ; scaler[21]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.379 ; scaler[21]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.320      ;
+; -2.370 ; second_scaler[13] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 2.982      ;
+; -2.370 ; second_scaler[13] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 2.982      ;
+; -2.370 ; second_scaler[13] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 2.982      ;
+; -2.370 ; second_scaler[13] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 2.982      ;
+; -2.370 ; second_scaler[13] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.383     ; 2.982      ;
+; -2.350 ; second_scaler[8]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.605      ;
+; -2.350 ; second_scaler[8]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.605      ;
+; -2.350 ; second_scaler[8]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.605      ;
+; -2.350 ; second_scaler[8]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.605      ;
+; -2.350 ; second_scaler[8]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.605      ;
+; -2.350 ; second_scaler[8]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.605      ;
+; -2.325 ; scaler[16]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.325 ; scaler[16]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.266      ;
+; -2.265 ; second_scaler[7]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.520      ;
+; -2.265 ; second_scaler[7]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.520      ;
+; -2.265 ; second_scaler[7]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.520      ;
+; -2.265 ; second_scaler[7]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.520      ;
+; -2.265 ; second_scaler[7]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.520      ;
+; -2.265 ; second_scaler[7]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.260      ; 3.520      ;
+; -2.241 ; scaler[13]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.182      ;
+; -2.241 ; scaler[13]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.182      ;
+; -2.241 ; scaler[13]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.182      ;
+; -2.241 ; scaler[13]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.182      ;
+; -2.241 ; scaler[13]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.182      ;
+; -2.241 ; scaler[13]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.054     ; 3.182      ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk_10MHz'                                                                              ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 0.299 ; clk_out~reg0      ; clk_out~reg0      ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.068      ; 0.511      ;
+; 0.299 ; clk_1Hz           ; clk_1Hz           ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.068      ; 0.511      ;
+; 0.313 ; clk_2Hz           ; clk_2Hz           ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.511      ;
+; 0.336 ; second_scaler[21] ; second_scaler[21] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.547      ;
+; 0.420 ; second_scaler[9]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.381      ; 0.945      ;
+; 0.430 ; second_scaler[8]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.381      ; 0.955      ;
+; 0.482 ; second_scaler[1]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.693      ;
+; 0.485 ; second_scaler[3]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.696      ;
+; 0.486 ; second_scaler[4]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.697      ;
+; 0.487 ; second_scaler[2]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.698      ;
+; 0.488 ; second_scaler[11] ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.699      ;
+; 0.488 ; second_scaler[10] ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.699      ;
+; 0.490 ; second_scaler[15] ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.701      ;
+; 0.490 ; second_scaler[16] ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.701      ;
+; 0.490 ; second_scaler[17] ; second_scaler[17] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.701      ;
+; 0.491 ; second_scaler[19] ; second_scaler[19] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.702      ;
+; 0.494 ; scaler[1]         ; scaler[1]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.693      ;
+; 0.497 ; scaler[3]         ; scaler[3]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.696      ;
+; 0.497 ; scaler[5]         ; scaler[5]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.696      ;
+; 0.498 ; second_scaler[0]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.709      ;
+; 0.498 ; scaler[4]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.697      ;
+; 0.499 ; scaler[2]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.698      ;
+; 0.500 ; scaler[8]         ; scaler[8]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.699      ;
+; 0.501 ; second_scaler[8]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.699      ;
+; 0.501 ; second_scaler[13] ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.712      ;
+; 0.501 ; scaler[6]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.700      ;
+; 0.501 ; scaler[7]         ; scaler[7]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.700      ;
+; 0.502 ; second_scaler[9]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.700      ;
+; 0.502 ; scaler[9]         ; scaler[9]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.701      ;
+; 0.503 ; scaler[15]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.701      ;
+; 0.504 ; scaler[16]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.702      ;
+; 0.504 ; scaler[19]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.702      ;
+; 0.505 ; second_scaler[18] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.716      ;
+; 0.507 ; scaler[18]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.705      ;
+; 0.507 ; second_scaler[9]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.034      ;
+; 0.510 ; scaler[0]         ; scaler[0]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.709      ;
+; 0.511 ; scaler[10]        ; scaler[10]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.710      ;
+; 0.513 ; scaler[11]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; scaler[14]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; scaler[17]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.711      ;
+; 0.514 ; second_scaler[9]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.041      ;
+; 0.514 ; scaler[13]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.712      ;
+; 0.514 ; scaler[20]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.712      ;
+; 0.515 ; scaler[22]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.713      ;
+; 0.516 ; scaler[12]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.714      ;
+; 0.517 ; second_scaler[8]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.044      ;
+; 0.522 ; scaler[21]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.720      ;
+; 0.524 ; second_scaler[8]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.051      ;
+; 0.603 ; second_scaler[9]  ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.130      ;
+; 0.610 ; second_scaler[9]  ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.137      ;
+; 0.613 ; second_scaler[8]  ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.140      ;
+; 0.620 ; second_scaler[8]  ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.147      ;
+; 0.626 ; second_scaler[14] ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.837      ;
+; 0.635 ; second_scaler[20] ; second_scaler[20] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.846      ;
+; 0.641 ; second_scaler[6]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.839      ;
+; 0.645 ; second_scaler[7]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.843      ;
+; 0.647 ; second_scaler[5]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.845      ;
+; 0.650 ; second_scaler[12] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.861      ;
+; 0.658 ; second_scaler[7]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.381      ; 1.183      ;
+; 0.666 ; second_scaler[6]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.381      ; 1.191      ;
+; 0.699 ; second_scaler[9]  ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.226      ;
+; 0.706 ; second_scaler[9]  ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.233      ;
+; 0.709 ; second_scaler[8]  ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.236      ;
+; 0.716 ; second_scaler[8]  ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.243      ;
+; 0.726 ; second_scaler[1]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.937      ;
+; 0.730 ; second_scaler[3]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.941      ;
+; 0.732 ; second_scaler[0]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.943      ;
+; 0.733 ; second_scaler[11] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.944      ;
+; 0.734 ; second_scaler[17] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.945      ;
+; 0.735 ; second_scaler[10] ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.069      ; 0.948      ;
+; 0.735 ; second_scaler[15] ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.946      ;
+; 0.736 ; second_scaler[2]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.947      ;
+; 0.736 ; second_scaler[19] ; second_scaler[20] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.947      ;
+; 0.738 ; scaler[1]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.937      ;
+; 0.739 ; second_scaler[16] ; second_scaler[17] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.950      ;
+; 0.739 ; second_scaler[7]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.266      ;
+; 0.739 ; second_scaler[0]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.950      ;
+; 0.742 ; scaler[3]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.941      ;
+; 0.742 ; scaler[5]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.941      ;
+; 0.742 ; second_scaler[10] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.069      ; 0.955      ;
+; 0.743 ; second_scaler[2]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.954      ;
+; 0.744 ; scaler[0]         ; scaler[1]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.943      ;
+; 0.746 ; scaler[7]         ; scaler[8]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.945      ;
+; 0.746 ; second_scaler[13] ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.957      ;
+; 0.746 ; second_scaler[16] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.957      ;
+; 0.747 ; scaler[9]         ; scaler[10]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.946      ;
+; 0.747 ; scaler[4]         ; scaler[5]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.946      ;
+; 0.748 ; scaler[15]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.946      ;
+; 0.748 ; scaler[2]         ; scaler[3]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.947      ;
+; 0.749 ; scaler[19]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.947      ;
+; 0.749 ; scaler[8]         ; scaler[9]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.948      ;
+; 0.750 ; scaler[6]         ; scaler[7]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.949      ;
+; 0.750 ; second_scaler[8]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.948      ;
+; 0.751 ; scaler[0]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.950      ;
+; 0.752 ; second_scaler[7]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.279      ;
+; 0.753 ; scaler[16]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.054      ; 0.951      ;
+; 0.753 ; second_scaler[6]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.383      ; 1.280      ;
+; 0.754 ; second_scaler[18] ; second_scaler[19] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.067      ; 0.965      ;
+; 0.754 ; scaler[4]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.953      ;
+; 0.755 ; scaler[2]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.055      ; 0.954      ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_10MHz ; -1.332 ; -47.715       ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_10MHz ; 0.179 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; clk_10MHz ; -3.000 ; -54.218                     ;
++-----------+--------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk_10MHz'                                                                              ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -1.332 ; second_scaler[6]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.283      ;
+; -1.332 ; second_scaler[6]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.283      ;
+; -1.332 ; second_scaler[6]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.283      ;
+; -1.332 ; second_scaler[6]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.283      ;
+; -1.332 ; second_scaler[6]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.283      ;
+; -1.325 ; second_scaler[5]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.276      ;
+; -1.325 ; second_scaler[5]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.276      ;
+; -1.325 ; second_scaler[5]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.276      ;
+; -1.325 ; second_scaler[5]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.276      ;
+; -1.325 ; second_scaler[5]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.276      ;
+; -1.307 ; second_scaler[10] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.233     ; 2.061      ;
+; -1.307 ; second_scaler[10] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.233     ; 2.061      ;
+; -1.307 ; second_scaler[10] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.233     ; 2.061      ;
+; -1.307 ; second_scaler[10] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.233     ; 2.061      ;
+; -1.307 ; second_scaler[10] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.233     ; 2.061      ;
+; -1.251 ; second_scaler[8]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.202      ;
+; -1.251 ; second_scaler[8]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.202      ;
+; -1.251 ; second_scaler[8]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.202      ;
+; -1.251 ; second_scaler[8]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.202      ;
+; -1.251 ; second_scaler[8]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.202      ;
+; -1.205 ; second_scaler[7]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.156      ;
+; -1.205 ; second_scaler[7]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.156      ;
+; -1.205 ; second_scaler[7]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.156      ;
+; -1.205 ; second_scaler[7]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.156      ;
+; -1.205 ; second_scaler[7]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.156      ;
+; -1.171 ; second_scaler[9]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.122      ;
+; -1.171 ; second_scaler[9]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.122      ;
+; -1.171 ; second_scaler[9]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.122      ;
+; -1.171 ; second_scaler[9]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.122      ;
+; -1.171 ; second_scaler[9]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.122      ;
+; -1.148 ; second_scaler[14] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.900      ;
+; -1.148 ; second_scaler[14] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.900      ;
+; -1.148 ; second_scaler[14] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.900      ;
+; -1.148 ; second_scaler[14] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.900      ;
+; -1.148 ; second_scaler[14] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.900      ;
+; -1.143 ; second_scaler[6]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.283      ;
+; -1.143 ; second_scaler[6]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.283      ;
+; -1.143 ; second_scaler[6]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.283      ;
+; -1.143 ; second_scaler[6]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.283      ;
+; -1.143 ; second_scaler[6]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.283      ;
+; -1.143 ; second_scaler[6]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.283      ;
+; -1.136 ; second_scaler[5]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.276      ;
+; -1.136 ; second_scaler[5]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.276      ;
+; -1.136 ; second_scaler[5]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.276      ;
+; -1.136 ; second_scaler[5]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.276      ;
+; -1.136 ; second_scaler[5]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.276      ;
+; -1.136 ; second_scaler[5]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.276      ;
+; -1.118 ; second_scaler[10] ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.044     ; 2.061      ;
+; -1.118 ; second_scaler[10] ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.044     ; 2.061      ;
+; -1.118 ; second_scaler[10] ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.044     ; 2.061      ;
+; -1.118 ; second_scaler[10] ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.044     ; 2.061      ;
+; -1.118 ; second_scaler[10] ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.044     ; 2.061      ;
+; -1.118 ; second_scaler[10] ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.044     ; 2.061      ;
+; -1.072 ; second_scaler[13] ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.824      ;
+; -1.072 ; second_scaler[13] ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.824      ;
+; -1.072 ; second_scaler[13] ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.824      ;
+; -1.072 ; second_scaler[13] ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.824      ;
+; -1.072 ; second_scaler[13] ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.235     ; 1.824      ;
+; -1.062 ; second_scaler[8]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.202      ;
+; -1.062 ; second_scaler[8]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.202      ;
+; -1.062 ; second_scaler[8]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.202      ;
+; -1.062 ; second_scaler[8]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.202      ;
+; -1.062 ; second_scaler[8]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.202      ;
+; -1.062 ; second_scaler[8]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.202      ;
+; -1.060 ; scaler[21]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.060 ; scaler[21]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.011      ;
+; -1.056 ; scaler[16]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.056 ; scaler[16]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 2.007      ;
+; -1.029 ; second_scaler[6]  ; clk_out~reg0      ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.152      ; 2.168      ;
+; -1.022 ; second_scaler[5]  ; clk_out~reg0      ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.152      ; 2.161      ;
+; -1.016 ; second_scaler[7]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.156      ;
+; -1.016 ; second_scaler[7]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.156      ;
+; -1.016 ; second_scaler[7]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.156      ;
+; -1.016 ; second_scaler[7]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.156      ;
+; -1.016 ; second_scaler[7]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.156      ;
+; -1.016 ; second_scaler[7]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 1.000        ; 0.153      ; 2.156      ;
+; -1.011 ; scaler[13]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 1.962      ;
+; -1.011 ; scaler[13]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 1.962      ;
+; -1.011 ; scaler[13]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 1.962      ;
+; -1.011 ; scaler[13]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 1.000        ; -0.036     ; 1.962      ;
++--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk_10MHz'                                                                              ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 0.179 ; clk_out~reg0      ; clk_out~reg0      ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; clk_1Hz           ; clk_1Hz           ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.307      ;
+; 0.187 ; clk_2Hz           ; clk_2Hz           ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.307      ;
+; 0.197 ; second_scaler[21] ; second_scaler[21] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.325      ;
+; 0.250 ; second_scaler[9]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.233      ; 0.567      ;
+; 0.262 ; second_scaler[8]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.233      ; 0.579      ;
+; 0.285 ; second_scaler[1]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.413      ;
+; 0.286 ; second_scaler[3]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.414      ;
+; 0.287 ; second_scaler[2]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.415      ;
+; 0.288 ; second_scaler[4]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.416      ;
+; 0.289 ; second_scaler[11] ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.417      ;
+; 0.289 ; second_scaler[10] ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.417      ;
+; 0.291 ; second_scaler[15] ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.419      ;
+; 0.291 ; second_scaler[16] ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.419      ;
+; 0.291 ; second_scaler[17] ; second_scaler[17] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.419      ;
+; 0.292 ; second_scaler[19] ; second_scaler[19] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.420      ;
+; 0.293 ; scaler[1]         ; scaler[1]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.413      ;
+; 0.294 ; scaler[3]         ; scaler[3]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.414      ;
+; 0.295 ; second_scaler[0]  ; second_scaler[0]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.423      ;
+; 0.295 ; scaler[2]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.415      ;
+; 0.295 ; scaler[5]         ; scaler[5]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.415      ;
+; 0.296 ; scaler[4]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.416      ;
+; 0.297 ; scaler[9]         ; scaler[9]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.417      ;
+; 0.298 ; second_scaler[8]  ; second_scaler[8]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; second_scaler[9]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; second_scaler[13] ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.426      ;
+; 0.298 ; scaler[8]         ; scaler[8]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.418      ;
+; 0.299 ; second_scaler[18] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.427      ;
+; 0.299 ; scaler[6]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; scaler[7]         ; scaler[7]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; scaler[15]        ; scaler[15]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; scaler[19]        ; scaler[19]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.419      ;
+; 0.300 ; scaler[18]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; scaler[16]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.420      ;
+; 0.303 ; scaler[0]         ; scaler[0]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.423      ;
+; 0.305 ; scaler[11]        ; scaler[11]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; scaler[10]        ; scaler[10]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; scaler[20]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; scaler[17]        ; scaler[17]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; scaler[13]        ; scaler[13]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; scaler[12]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; scaler[14]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; scaler[22]        ; scaler[22]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.426      ;
+; 0.311 ; second_scaler[9]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.630      ;
+; 0.312 ; scaler[21]        ; scaler[21]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.432      ;
+; 0.314 ; second_scaler[9]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.633      ;
+; 0.323 ; second_scaler[8]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.642      ;
+; 0.326 ; second_scaler[8]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.645      ;
+; 0.360 ; second_scaler[14] ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.488      ;
+; 0.365 ; second_scaler[20] ; second_scaler[20] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.493      ;
+; 0.373 ; second_scaler[7]  ; second_scaler[7]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.493      ;
+; 0.374 ; second_scaler[5]  ; second_scaler[5]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.494      ;
+; 0.374 ; second_scaler[6]  ; second_scaler[6]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.494      ;
+; 0.375 ; second_scaler[12] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.503      ;
+; 0.377 ; second_scaler[9]  ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.696      ;
+; 0.380 ; second_scaler[9]  ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.699      ;
+; 0.389 ; second_scaler[8]  ; second_scaler[13] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.708      ;
+; 0.391 ; second_scaler[7]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.233      ; 0.708      ;
+; 0.392 ; second_scaler[8]  ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.711      ;
+; 0.404 ; second_scaler[6]  ; second_scaler[10] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.233      ; 0.721      ;
+; 0.434 ; second_scaler[1]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.562      ;
+; 0.435 ; second_scaler[3]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.563      ;
+; 0.438 ; second_scaler[11] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.566      ;
+; 0.440 ; second_scaler[15] ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.568      ;
+; 0.440 ; second_scaler[17] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.568      ;
+; 0.441 ; second_scaler[19] ; second_scaler[20] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.569      ;
+; 0.442 ; scaler[1]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.562      ;
+; 0.443 ; second_scaler[9]  ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.762      ;
+; 0.443 ; scaler[3]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.563      ;
+; 0.444 ; second_scaler[0]  ; second_scaler[1]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.572      ;
+; 0.444 ; scaler[5]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.564      ;
+; 0.445 ; second_scaler[2]  ; second_scaler[3]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.573      ;
+; 0.445 ; second_scaler[10] ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.046      ; 0.575      ;
+; 0.446 ; scaler[9]         ; scaler[10]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.566      ;
+; 0.446 ; second_scaler[9]  ; second_scaler[16] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.765      ;
+; 0.447 ; second_scaler[13] ; second_scaler[14] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.575      ;
+; 0.447 ; second_scaler[0]  ; second_scaler[2]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.575      ;
+; 0.448 ; scaler[7]         ; scaler[8]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; scaler[15]        ; scaler[16]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; scaler[19]        ; scaler[20]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; second_scaler[10] ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.046      ; 0.578      ;
+; 0.448 ; second_scaler[2]  ; second_scaler[4]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.576      ;
+; 0.449 ; second_scaler[16] ; second_scaler[17] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.577      ;
+; 0.452 ; scaler[0]         ; scaler[1]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.572      ;
+; 0.452 ; second_scaler[7]  ; second_scaler[11] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.771      ;
+; 0.452 ; second_scaler[16] ; second_scaler[18] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.580      ;
+; 0.453 ; scaler[2]         ; scaler[3]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.573      ;
+; 0.454 ; scaler[4]         ; scaler[5]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; scaler[17]        ; scaler[18]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; scaler[11]        ; scaler[12]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.574      ;
+; 0.455 ; scaler[13]        ; scaler[14]        ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; second_scaler[7]  ; second_scaler[12] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.774      ;
+; 0.455 ; scaler[0]         ; scaler[2]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; second_scaler[8]  ; second_scaler[15] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.235      ; 0.774      ;
+; 0.456 ; scaler[8]         ; scaler[9]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; second_scaler[8]  ; second_scaler[9]  ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; scaler[2]         ; scaler[4]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.576      ;
+; 0.457 ; second_scaler[18] ; second_scaler[19] ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.044      ; 0.585      ;
+; 0.457 ; scaler[6]         ; scaler[7]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.577      ;
+; 0.457 ; scaler[4]         ; scaler[6]         ; clk_10MHz    ; clk_10MHz   ; 0.000        ; 0.036      ; 0.577      ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.175   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
+;  clk_10MHz       ; -3.175   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -124.314 ; 0.0   ; 0.0      ; 0.0     ; -54.218             ;
+;  clk_10MHz       ; -124.314 ; 0.000 ; N/A      ; N/A     ; -54.218             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; clk_out       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; switch_1                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk_10MHz               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clk_out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clk_out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clk_out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_10MHz  ; clk_10MHz ; 1417     ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_10MHz  ; clk_10MHz ; 1417     ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 48    ; 48   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------+
+; Clock Status Summary                       ;
++-----------+-----------+------+-------------+
+; Target    ; Clock     ; Type ; Status      ;
++-----------+-----------+------+-------------+
+; clk_10MHz ; clk_10MHz ; Base ; Constrained ;
++-----------+-----------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; switch_1   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; clk_out     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; switch_1   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; clk_out     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Feb 15 21:12:59 2022
+Info: Command: quartus_sta BlinkerTest -c BlinkerTest
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 32 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'BlinkerTest.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_10MHz clk_10MHz
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.175
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.175            -124.314 clk_10MHz 
+Info (332146): Worst-case hold slack is 0.344
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.344               0.000 clk_10MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -51.000 clk_10MHz 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.770
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.770            -108.153 clk_10MHz 
+Info (332146): Worst-case hold slack is 0.299
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.299               0.000 clk_10MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -51.000 clk_10MHz 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.332
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.332             -47.715 clk_10MHz 
+Info (332146): Worst-case hold slack is 0.179
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.179               0.000 clk_10MHz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -54.218 clk_10MHz 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4916 megabytes
+    Info: Processing ended: Tue Feb 15 21:13:01 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

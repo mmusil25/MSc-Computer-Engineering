@@ -1,0 +1,24 @@
+|SecondGenerator
+tick_in => minute_out_tmp.CLK
+tick_in => second_count[0].CLK
+tick_in => second_count[1].CLK
+tick_in => second_count[2].CLK
+tick_in => second_count[3].CLK
+tick_in => second_count[4].CLK
+tick_in => second_count[5].CLK
+tick_in => minute_out~reg0.CLK
+tick_in => second[0]~reg0.CLK
+tick_in => second[1]~reg0.CLK
+tick_in => second[2]~reg0.CLK
+tick_in => second[3]~reg0.CLK
+tick_in => second[4]~reg0.CLK
+tick_in => second[5]~reg0.CLK
+minute_out << minute_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[0] << second[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[1] << second[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[2] << second[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[3] << second[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[4] << second[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[5] << second[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

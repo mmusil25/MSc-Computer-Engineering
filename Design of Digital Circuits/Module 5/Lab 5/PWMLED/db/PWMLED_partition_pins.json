@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pwm_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_leds[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dn_btn",
+					"strict" : false
+				},
+				{
+					"name" : "up_btn",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

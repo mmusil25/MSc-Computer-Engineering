@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Final Project/Code/DoubleDabble
+Ed_eight_bit_sr
+Z0 w1658733993
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register
+Z4 8C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/D_eight_bit_SR.vhd
+Z5 FC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/D_eight_bit_SR.vhd
+l0
+L6
+V<Xc_QC0Gf_Ij1Rm<^z;5S2
+!s100 4;;]jh]4>[QPHQ[Yk<BE03
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1658734024
+!i10b 1
+Z8 !s108 1658734024.000000
+Z9 !s90 -reportprogress|300|-work|modelsim|-2002|-explicit|-stats=none|C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/D_eight_bit_SR.vhd|
+Z10 !s107 C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/D_eight_bit_SR.vhd|
+!i113 1
+Z11 o-work modelsim -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+DEx4 work 14 d_eight_bit_sr 0 22 <Xc_QC0Gf_Ij1Rm<^z;5S2
+l23
+L13
+VWTSzEc;@ZTd4MaHWXag0?1
+!s100 LeQf0@U:>9om_]zA65jn=3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_eight_bit_shift_register
+Z13 w1658734021
+R1
+R2
+R3
+Z14 8C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/TB_eight_bit_shift_register.vhd
+Z15 FC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/TB_eight_bit_shift_register.vhd
+l0
+L4
+Vhf<O=z88W:BU@cSocKB6:0
+!s100 5^>_6fP=n^<OHPN81YQk52
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|modelsim|-2002|-explicit|-stats=none|C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/TB_eight_bit_shift_register.vhd|
+Z17 !s107 C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 9/8_bit_wide_serial_shift_register/TB_eight_bit_shift_register.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+Z18 DEx4 work 27 tb_eight_bit_shift_register 0 22 hf<O=z88W:BU@cSocKB6:0
+l22
+L8
+V293;BFh<XX5W_[kT_?5gl2
+!s100 _QVQVGdjMmhmAEQA=46gJ1
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12

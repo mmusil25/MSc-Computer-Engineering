@@ -1,0 +1,8 @@
+|Diagram
+OutputLogic <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Input_1B => inst1.IN0
+Input_2B => inst1.IN1
+Input_1A => inst.IN0
+Input_2A => inst.IN1
+
+

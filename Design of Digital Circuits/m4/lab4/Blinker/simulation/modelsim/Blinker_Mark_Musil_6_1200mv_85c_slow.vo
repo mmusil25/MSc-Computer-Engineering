@@ -1,0 +1,1614 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "02/03/2022 08:34:05"
+
+// 
+// Device: Altera EP4CE22F17C6 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Blinker_m4 (
+	clk_50MHz,
+	tick_out);
+input 	clk_50MHz;
+output 	tick_out;
+
+// Design Ports Information
+// tick_out	=>  Location: PIN_B10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk_50MHz	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("Blinker_Mark_Musil_6_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \tick_out~output_o ;
+wire \clk_50MHz~input_o ;
+wire \clk_50MHz~inputclkctrl_outclk ;
+wire \clock_1hz_process:scaler[0]~1_combout ;
+wire \clock_1hz_process:scaler[0]~q ;
+wire \clock_1hz_process:scaler[0]~2 ;
+wire \clock_1hz_process:scaler[1]~1_combout ;
+wire \clock_1hz_process:scaler[1]~q ;
+wire \clock_1hz_process:scaler[1]~2 ;
+wire \clock_1hz_process:scaler[2]~1_combout ;
+wire \clock_1hz_process:scaler[2]~q ;
+wire \clock_1hz_process:scaler[2]~2 ;
+wire \clock_1hz_process:scaler[3]~1_combout ;
+wire \clock_1hz_process:scaler[3]~q ;
+wire \clock_1hz_process:scaler[3]~2 ;
+wire \clock_1hz_process:scaler[4]~1_combout ;
+wire \clock_1hz_process:scaler[4]~q ;
+wire \clock_1hz_process:scaler[4]~2 ;
+wire \clock_1hz_process:scaler[5]~1_combout ;
+wire \clock_1hz_process:scaler[5]~q ;
+wire \clock_1hz_process:scaler[5]~2 ;
+wire \clock_1hz_process:scaler[6]~1_combout ;
+wire \clock_1hz_process:scaler[6]~q ;
+wire \clock_1hz_process:scaler[6]~2 ;
+wire \clock_1hz_process:scaler[7]~1_combout ;
+wire \clock_1hz_process:scaler[7]~q ;
+wire \clock_1hz_process:scaler[7]~2 ;
+wire \clock_1hz_process:scaler[8]~1_combout ;
+wire \clock_1hz_process:scaler[8]~q ;
+wire \clock_1hz_process:scaler[8]~2 ;
+wire \clock_1hz_process:scaler[9]~1_combout ;
+wire \clock_1hz_process:scaler[9]~q ;
+wire \clock_1hz_process:scaler[9]~2 ;
+wire \clock_1hz_process:scaler[10]~1_combout ;
+wire \clock_1hz_process:scaler[10]~q ;
+wire \clock_1hz_process:scaler[10]~2 ;
+wire \clock_1hz_process:scaler[11]~1_combout ;
+wire \clock_1hz_process:scaler[11]~q ;
+wire \clock_1hz_process:scaler[11]~2 ;
+wire \clock_1hz_process:scaler[12]~1_combout ;
+wire \clock_1hz_process:scaler[12]~q ;
+wire \clock_1hz_process:scaler[12]~2 ;
+wire \clock_1hz_process:scaler[13]~1_combout ;
+wire \clock_1hz_process:scaler[13]~q ;
+wire \clock_1hz_process:scaler[13]~2 ;
+wire \clock_1hz_process:scaler[14]~1_combout ;
+wire \clock_1hz_process:scaler[14]~q ;
+wire \clock_1hz_process:scaler[14]~2 ;
+wire \clock_1hz_process:scaler[15]~1_combout ;
+wire \clock_1hz_process:scaler[15]~q ;
+wire \clock_1hz_process:scaler[15]~2 ;
+wire \clock_1hz_process:scaler[16]~1_combout ;
+wire \clock_1hz_process:scaler[16]~q ;
+wire \clock_1hz_process:scaler[16]~2 ;
+wire \clock_1hz_process:scaler[17]~1_combout ;
+wire \clock_1hz_process:scaler[17]~q ;
+wire \clock_1hz_process:scaler[17]~2 ;
+wire \clock_1hz_process:scaler[18]~1_combout ;
+wire \clock_1hz_process:scaler[18]~q ;
+wire \clock_1hz_process:scaler[18]~2 ;
+wire \clock_1hz_process:scaler[19]~1_combout ;
+wire \clock_1hz_process:scaler[19]~q ;
+wire \clock_1hz_process:scaler[19]~2 ;
+wire \clock_1hz_process:scaler[20]~1_combout ;
+wire \clock_1hz_process:scaler[20]~q ;
+wire \clock_1hz_process:scaler[20]~2 ;
+wire \clock_1hz_process:scaler[21]~1_combout ;
+wire \clock_1hz_process:scaler[21]~q ;
+wire \clock_1hz_process:scaler[21]~2 ;
+wire \clock_1hz_process:scaler[22]~1_combout ;
+wire \clock_1hz_process:scaler[22]~q ;
+wire \clock_1hz_process:scaler[22]~2 ;
+wire \clock_1hz_process:scaler[23]~1_combout ;
+wire \clock_1hz_process:scaler[23]~q ;
+wire \clock_1hz_process:scaler[23]~2 ;
+wire \clock_1hz_process:scaler[24]~1_combout ;
+wire \clock_1hz_process:scaler[24]~q ;
+wire \clock_1hz_process:scaler[24]~2 ;
+wire \clock_1hz_process:scaler[25]~1_combout ;
+wire \clock_1hz_process:scaler[25]~q ;
+wire \clock_1hz_process:scaler[25]~2 ;
+wire \clock_1hz_process:scaler[26]~1_combout ;
+wire \clock_1hz_process:scaler[26]~q ;
+wire \clock_1hz_process:scaler[26]~2 ;
+wire \clock_1hz_process:scaler[27]~1_combout ;
+wire \clock_1hz_process:scaler[27]~q ;
+wire \clock_1hz_process:scaler[27]~2 ;
+wire \clock_1hz_process:scaler[28]~1_combout ;
+wire \clock_1hz_process:scaler[28]~q ;
+wire \clock_1hz_process:scaler[28]~2 ;
+wire \clock_1hz_process:scaler[29]~1_combout ;
+wire \clock_1hz_process:scaler[29]~q ;
+wire \clock_1hz_process:scaler[29]~2 ;
+wire \clock_1hz_process:scaler[30]~1_combout ;
+wire \clock_1hz_process:scaler[30]~q ;
+wire \LessThan0~9_combout ;
+wire \LessThan0~0_combout ;
+wire \LessThan0~1_combout ;
+wire \LessThan0~4_combout ;
+wire \LessThan0~5_combout ;
+wire \LessThan0~2_combout ;
+wire \LessThan0~3_combout ;
+wire \LessThan0~6_combout ;
+wire \LessThan0~7_combout ;
+wire \LessThan0~8_combout ;
+wire \LessThan0~10_combout ;
+wire \clock_1hz_process:pulse~0_combout ;
+wire \clock_1hz_process:pulse~q ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X34_Y34_N16
+cycloneive_io_obuf \tick_out~output (
+	.i(\clock_1hz_process:pulse~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\tick_out~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \tick_out~output .bus_hold = "false";
+defparam \tick_out~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y16_N8
+cycloneive_io_ibuf \clk_50MHz~input (
+	.i(clk_50MHz),
+	.ibar(gnd),
+	.o(\clk_50MHz~input_o ));
+// synopsys translate_off
+defparam \clk_50MHz~input .bus_hold = "false";
+defparam \clk_50MHz~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G2
+cycloneive_clkctrl \clk_50MHz~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\clk_50MHz~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\clk_50MHz~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \clk_50MHz~inputclkctrl .clock_type = "global clock";
+defparam \clk_50MHz~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N2
+cycloneive_lcell_comb \clock_1hz_process:scaler[0]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[0]~1_combout  = \clock_1hz_process:scaler[0]~q  $ (VCC)
+// \clock_1hz_process:scaler[0]~2  = CARRY(\clock_1hz_process:scaler[0]~q )
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[0]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\clock_1hz_process:scaler[0]~1_combout ),
+	.cout(\clock_1hz_process:scaler[0]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[0]~1 .lut_mask = 16'h33CC;
+defparam \clock_1hz_process:scaler[0]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N3
+dffeas \clock_1hz_process:scaler[0] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[0]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[0]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[0] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N4
+cycloneive_lcell_comb \clock_1hz_process:scaler[1]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[1]~1_combout  = (\clock_1hz_process:scaler[1]~q  & (!\clock_1hz_process:scaler[0]~2 )) # (!\clock_1hz_process:scaler[1]~q  & ((\clock_1hz_process:scaler[0]~2 ) # (GND)))
+// \clock_1hz_process:scaler[1]~2  = CARRY((!\clock_1hz_process:scaler[0]~2 ) # (!\clock_1hz_process:scaler[1]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[1]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[0]~2 ),
+	.combout(\clock_1hz_process:scaler[1]~1_combout ),
+	.cout(\clock_1hz_process:scaler[1]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[1]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[1]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N5
+dffeas \clock_1hz_process:scaler[1] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[1]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[1]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[1] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N6
+cycloneive_lcell_comb \clock_1hz_process:scaler[2]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[2]~1_combout  = (\clock_1hz_process:scaler[2]~q  & (\clock_1hz_process:scaler[1]~2  $ (GND))) # (!\clock_1hz_process:scaler[2]~q  & (!\clock_1hz_process:scaler[1]~2  & VCC))
+// \clock_1hz_process:scaler[2]~2  = CARRY((\clock_1hz_process:scaler[2]~q  & !\clock_1hz_process:scaler[1]~2 ))
+
+	.dataa(\clock_1hz_process:scaler[2]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[1]~2 ),
+	.combout(\clock_1hz_process:scaler[2]~1_combout ),
+	.cout(\clock_1hz_process:scaler[2]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[2]~1 .lut_mask = 16'hA50A;
+defparam \clock_1hz_process:scaler[2]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N7
+dffeas \clock_1hz_process:scaler[2] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[2]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[2]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[2] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N8
+cycloneive_lcell_comb \clock_1hz_process:scaler[3]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[3]~1_combout  = (\clock_1hz_process:scaler[3]~q  & (!\clock_1hz_process:scaler[2]~2 )) # (!\clock_1hz_process:scaler[3]~q  & ((\clock_1hz_process:scaler[2]~2 ) # (GND)))
+// \clock_1hz_process:scaler[3]~2  = CARRY((!\clock_1hz_process:scaler[2]~2 ) # (!\clock_1hz_process:scaler[3]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[3]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[2]~2 ),
+	.combout(\clock_1hz_process:scaler[3]~1_combout ),
+	.cout(\clock_1hz_process:scaler[3]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[3]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[3]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N9
+dffeas \clock_1hz_process:scaler[3] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[3]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[3]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[3] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N10
+cycloneive_lcell_comb \clock_1hz_process:scaler[4]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[4]~1_combout  = (\clock_1hz_process:scaler[4]~q  & (\clock_1hz_process:scaler[3]~2  $ (GND))) # (!\clock_1hz_process:scaler[4]~q  & (!\clock_1hz_process:scaler[3]~2  & VCC))
+// \clock_1hz_process:scaler[4]~2  = CARRY((\clock_1hz_process:scaler[4]~q  & !\clock_1hz_process:scaler[3]~2 ))
+
+	.dataa(\clock_1hz_process:scaler[4]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[3]~2 ),
+	.combout(\clock_1hz_process:scaler[4]~1_combout ),
+	.cout(\clock_1hz_process:scaler[4]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[4]~1 .lut_mask = 16'hA50A;
+defparam \clock_1hz_process:scaler[4]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N11
+dffeas \clock_1hz_process:scaler[4] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[4]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[4]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[4] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N12
+cycloneive_lcell_comb \clock_1hz_process:scaler[5]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[5]~1_combout  = (\clock_1hz_process:scaler[5]~q  & (!\clock_1hz_process:scaler[4]~2 )) # (!\clock_1hz_process:scaler[5]~q  & ((\clock_1hz_process:scaler[4]~2 ) # (GND)))
+// \clock_1hz_process:scaler[5]~2  = CARRY((!\clock_1hz_process:scaler[4]~2 ) # (!\clock_1hz_process:scaler[5]~q ))
+
+	.dataa(\clock_1hz_process:scaler[5]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[4]~2 ),
+	.combout(\clock_1hz_process:scaler[5]~1_combout ),
+	.cout(\clock_1hz_process:scaler[5]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[5]~1 .lut_mask = 16'h5A5F;
+defparam \clock_1hz_process:scaler[5]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N13
+dffeas \clock_1hz_process:scaler[5] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[5]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[5]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[5] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N14
+cycloneive_lcell_comb \clock_1hz_process:scaler[6]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[6]~1_combout  = (\clock_1hz_process:scaler[6]~q  & (\clock_1hz_process:scaler[5]~2  $ (GND))) # (!\clock_1hz_process:scaler[6]~q  & (!\clock_1hz_process:scaler[5]~2  & VCC))
+// \clock_1hz_process:scaler[6]~2  = CARRY((\clock_1hz_process:scaler[6]~q  & !\clock_1hz_process:scaler[5]~2 ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[6]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[5]~2 ),
+	.combout(\clock_1hz_process:scaler[6]~1_combout ),
+	.cout(\clock_1hz_process:scaler[6]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[6]~1 .lut_mask = 16'hC30C;
+defparam \clock_1hz_process:scaler[6]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N15
+dffeas \clock_1hz_process:scaler[6] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[6]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[6]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[6] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N16
+cycloneive_lcell_comb \clock_1hz_process:scaler[7]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[7]~1_combout  = (\clock_1hz_process:scaler[7]~q  & (!\clock_1hz_process:scaler[6]~2 )) # (!\clock_1hz_process:scaler[7]~q  & ((\clock_1hz_process:scaler[6]~2 ) # (GND)))
+// \clock_1hz_process:scaler[7]~2  = CARRY((!\clock_1hz_process:scaler[6]~2 ) # (!\clock_1hz_process:scaler[7]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[7]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[6]~2 ),
+	.combout(\clock_1hz_process:scaler[7]~1_combout ),
+	.cout(\clock_1hz_process:scaler[7]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[7]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[7]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N17
+dffeas \clock_1hz_process:scaler[7] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[7]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[7]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[7] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N18
+cycloneive_lcell_comb \clock_1hz_process:scaler[8]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[8]~1_combout  = (\clock_1hz_process:scaler[8]~q  & (\clock_1hz_process:scaler[7]~2  $ (GND))) # (!\clock_1hz_process:scaler[8]~q  & (!\clock_1hz_process:scaler[7]~2  & VCC))
+// \clock_1hz_process:scaler[8]~2  = CARRY((\clock_1hz_process:scaler[8]~q  & !\clock_1hz_process:scaler[7]~2 ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[8]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[7]~2 ),
+	.combout(\clock_1hz_process:scaler[8]~1_combout ),
+	.cout(\clock_1hz_process:scaler[8]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[8]~1 .lut_mask = 16'hC30C;
+defparam \clock_1hz_process:scaler[8]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N19
+dffeas \clock_1hz_process:scaler[8] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[8]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[8]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[8] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N20
+cycloneive_lcell_comb \clock_1hz_process:scaler[9]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[9]~1_combout  = (\clock_1hz_process:scaler[9]~q  & (!\clock_1hz_process:scaler[8]~2 )) # (!\clock_1hz_process:scaler[9]~q  & ((\clock_1hz_process:scaler[8]~2 ) # (GND)))
+// \clock_1hz_process:scaler[9]~2  = CARRY((!\clock_1hz_process:scaler[8]~2 ) # (!\clock_1hz_process:scaler[9]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[9]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[8]~2 ),
+	.combout(\clock_1hz_process:scaler[9]~1_combout ),
+	.cout(\clock_1hz_process:scaler[9]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[9]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[9]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N21
+dffeas \clock_1hz_process:scaler[9] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[9]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[9]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[9] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[9] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N22
+cycloneive_lcell_comb \clock_1hz_process:scaler[10]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[10]~1_combout  = (\clock_1hz_process:scaler[10]~q  & (\clock_1hz_process:scaler[9]~2  $ (GND))) # (!\clock_1hz_process:scaler[10]~q  & (!\clock_1hz_process:scaler[9]~2  & VCC))
+// \clock_1hz_process:scaler[10]~2  = CARRY((\clock_1hz_process:scaler[10]~q  & !\clock_1hz_process:scaler[9]~2 ))
+
+	.dataa(\clock_1hz_process:scaler[10]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[9]~2 ),
+	.combout(\clock_1hz_process:scaler[10]~1_combout ),
+	.cout(\clock_1hz_process:scaler[10]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[10]~1 .lut_mask = 16'hA50A;
+defparam \clock_1hz_process:scaler[10]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N23
+dffeas \clock_1hz_process:scaler[10] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[10]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[10]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[10] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[10] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N24
+cycloneive_lcell_comb \clock_1hz_process:scaler[11]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[11]~1_combout  = (\clock_1hz_process:scaler[11]~q  & (!\clock_1hz_process:scaler[10]~2 )) # (!\clock_1hz_process:scaler[11]~q  & ((\clock_1hz_process:scaler[10]~2 ) # (GND)))
+// \clock_1hz_process:scaler[11]~2  = CARRY((!\clock_1hz_process:scaler[10]~2 ) # (!\clock_1hz_process:scaler[11]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[11]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[10]~2 ),
+	.combout(\clock_1hz_process:scaler[11]~1_combout ),
+	.cout(\clock_1hz_process:scaler[11]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[11]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[11]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N25
+dffeas \clock_1hz_process:scaler[11] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[11]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[11]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[11] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[11] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N26
+cycloneive_lcell_comb \clock_1hz_process:scaler[12]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[12]~1_combout  = (\clock_1hz_process:scaler[12]~q  & (\clock_1hz_process:scaler[11]~2  $ (GND))) # (!\clock_1hz_process:scaler[12]~q  & (!\clock_1hz_process:scaler[11]~2  & VCC))
+// \clock_1hz_process:scaler[12]~2  = CARRY((\clock_1hz_process:scaler[12]~q  & !\clock_1hz_process:scaler[11]~2 ))
+
+	.dataa(\clock_1hz_process:scaler[12]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[11]~2 ),
+	.combout(\clock_1hz_process:scaler[12]~1_combout ),
+	.cout(\clock_1hz_process:scaler[12]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[12]~1 .lut_mask = 16'hA50A;
+defparam \clock_1hz_process:scaler[12]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N27
+dffeas \clock_1hz_process:scaler[12] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[12]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[12]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[12] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[12] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N28
+cycloneive_lcell_comb \clock_1hz_process:scaler[13]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[13]~1_combout  = (\clock_1hz_process:scaler[13]~q  & (!\clock_1hz_process:scaler[12]~2 )) # (!\clock_1hz_process:scaler[13]~q  & ((\clock_1hz_process:scaler[12]~2 ) # (GND)))
+// \clock_1hz_process:scaler[13]~2  = CARRY((!\clock_1hz_process:scaler[12]~2 ) # (!\clock_1hz_process:scaler[13]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[13]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[12]~2 ),
+	.combout(\clock_1hz_process:scaler[13]~1_combout ),
+	.cout(\clock_1hz_process:scaler[13]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[13]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[13]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y25_N29
+dffeas \clock_1hz_process:scaler[13] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[13]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[13]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[13] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[13] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N30
+cycloneive_lcell_comb \clock_1hz_process:scaler[14]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[14]~1_combout  = (\clock_1hz_process:scaler[14]~q  & (\clock_1hz_process:scaler[13]~2  $ (GND))) # (!\clock_1hz_process:scaler[14]~q  & (!\clock_1hz_process:scaler[13]~2  & VCC))
+// \clock_1hz_process:scaler[14]~2  = CARRY((\clock_1hz_process:scaler[14]~q  & !\clock_1hz_process:scaler[13]~2 ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[14]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[13]~2 ),
+	.combout(\clock_1hz_process:scaler[14]~1_combout ),
+	.cout(\clock_1hz_process:scaler[14]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[14]~1 .lut_mask = 16'hC30C;
+defparam \clock_1hz_process:scaler[14]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N5
+dffeas \clock_1hz_process:scaler[14] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\clock_1hz_process:scaler[14]~1_combout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[14]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[14] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[14] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N0
+cycloneive_lcell_comb \clock_1hz_process:scaler[15]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[15]~1_combout  = (\clock_1hz_process:scaler[15]~q  & (!\clock_1hz_process:scaler[14]~2 )) # (!\clock_1hz_process:scaler[15]~q  & ((\clock_1hz_process:scaler[14]~2 ) # (GND)))
+// \clock_1hz_process:scaler[15]~2  = CARRY((!\clock_1hz_process:scaler[14]~2 ) # (!\clock_1hz_process:scaler[15]~q ))
+
+	.dataa(\clock_1hz_process:scaler[15]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[14]~2 ),
+	.combout(\clock_1hz_process:scaler[15]~1_combout ),
+	.cout(\clock_1hz_process:scaler[15]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[15]~1 .lut_mask = 16'h5A5F;
+defparam \clock_1hz_process:scaler[15]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N27
+dffeas \clock_1hz_process:scaler[15] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\clock_1hz_process:scaler[15]~1_combout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[15]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[15] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[15] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N2
+cycloneive_lcell_comb \clock_1hz_process:scaler[16]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[16]~1_combout  = (\clock_1hz_process:scaler[16]~q  & (\clock_1hz_process:scaler[15]~2  $ (GND))) # (!\clock_1hz_process:scaler[16]~q  & (!\clock_1hz_process:scaler[15]~2  & VCC))
+// \clock_1hz_process:scaler[16]~2  = CARRY((\clock_1hz_process:scaler[16]~q  & !\clock_1hz_process:scaler[15]~2 ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[16]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[15]~2 ),
+	.combout(\clock_1hz_process:scaler[16]~1_combout ),
+	.cout(\clock_1hz_process:scaler[16]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[16]~1 .lut_mask = 16'hC30C;
+defparam \clock_1hz_process:scaler[16]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N23
+dffeas \clock_1hz_process:scaler[16] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\clock_1hz_process:scaler[16]~1_combout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[16]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[16] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[16] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N4
+cycloneive_lcell_comb \clock_1hz_process:scaler[17]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[17]~1_combout  = (\clock_1hz_process:scaler[17]~q  & (!\clock_1hz_process:scaler[16]~2 )) # (!\clock_1hz_process:scaler[17]~q  & ((\clock_1hz_process:scaler[16]~2 ) # (GND)))
+// \clock_1hz_process:scaler[17]~2  = CARRY((!\clock_1hz_process:scaler[16]~2 ) # (!\clock_1hz_process:scaler[17]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[17]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[16]~2 ),
+	.combout(\clock_1hz_process:scaler[17]~1_combout ),
+	.cout(\clock_1hz_process:scaler[17]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[17]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[17]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N13
+dffeas \clock_1hz_process:scaler[17] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\clock_1hz_process:scaler[17]~1_combout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[17]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[17] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[17] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N6
+cycloneive_lcell_comb \clock_1hz_process:scaler[18]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[18]~1_combout  = (\clock_1hz_process:scaler[18]~q  & (\clock_1hz_process:scaler[17]~2  $ (GND))) # (!\clock_1hz_process:scaler[18]~q  & (!\clock_1hz_process:scaler[17]~2  & VCC))
+// \clock_1hz_process:scaler[18]~2  = CARRY((\clock_1hz_process:scaler[18]~q  & !\clock_1hz_process:scaler[17]~2 ))
+
+	.dataa(\clock_1hz_process:scaler[18]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[17]~2 ),
+	.combout(\clock_1hz_process:scaler[18]~1_combout ),
+	.cout(\clock_1hz_process:scaler[18]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[18]~1 .lut_mask = 16'hA50A;
+defparam \clock_1hz_process:scaler[18]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N1
+dffeas \clock_1hz_process:scaler[18] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\clock_1hz_process:scaler[18]~1_combout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[18]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[18] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[18] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N8
+cycloneive_lcell_comb \clock_1hz_process:scaler[19]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[19]~1_combout  = (\clock_1hz_process:scaler[19]~q  & (!\clock_1hz_process:scaler[18]~2 )) # (!\clock_1hz_process:scaler[19]~q  & ((\clock_1hz_process:scaler[18]~2 ) # (GND)))
+// \clock_1hz_process:scaler[19]~2  = CARRY((!\clock_1hz_process:scaler[18]~2 ) # (!\clock_1hz_process:scaler[19]~q ))
+
+	.dataa(\clock_1hz_process:scaler[19]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[18]~2 ),
+	.combout(\clock_1hz_process:scaler[19]~1_combout ),
+	.cout(\clock_1hz_process:scaler[19]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[19]~1 .lut_mask = 16'h5A5F;
+defparam \clock_1hz_process:scaler[19]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N11
+dffeas \clock_1hz_process:scaler[19] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\clock_1hz_process:scaler[19]~1_combout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[19]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[19] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[19] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N10
+cycloneive_lcell_comb \clock_1hz_process:scaler[20]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[20]~1_combout  = (\clock_1hz_process:scaler[20]~q  & (\clock_1hz_process:scaler[19]~2  $ (GND))) # (!\clock_1hz_process:scaler[20]~q  & (!\clock_1hz_process:scaler[19]~2  & VCC))
+// \clock_1hz_process:scaler[20]~2  = CARRY((\clock_1hz_process:scaler[20]~q  & !\clock_1hz_process:scaler[19]~2 ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[20]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[19]~2 ),
+	.combout(\clock_1hz_process:scaler[20]~1_combout ),
+	.cout(\clock_1hz_process:scaler[20]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[20]~1 .lut_mask = 16'hC30C;
+defparam \clock_1hz_process:scaler[20]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N17
+dffeas \clock_1hz_process:scaler[20] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\clock_1hz_process:scaler[20]~1_combout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[20]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[20] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[20] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N12
+cycloneive_lcell_comb \clock_1hz_process:scaler[21]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[21]~1_combout  = (\clock_1hz_process:scaler[21]~q  & (!\clock_1hz_process:scaler[20]~2 )) # (!\clock_1hz_process:scaler[21]~q  & ((\clock_1hz_process:scaler[20]~2 ) # (GND)))
+// \clock_1hz_process:scaler[21]~2  = CARRY((!\clock_1hz_process:scaler[20]~2 ) # (!\clock_1hz_process:scaler[21]~q ))
+
+	.dataa(\clock_1hz_process:scaler[21]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[20]~2 ),
+	.combout(\clock_1hz_process:scaler[21]~1_combout ),
+	.cout(\clock_1hz_process:scaler[21]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[21]~1 .lut_mask = 16'h5A5F;
+defparam \clock_1hz_process:scaler[21]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N13
+dffeas \clock_1hz_process:scaler[21] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[21]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[21]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[21] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[21] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N14
+cycloneive_lcell_comb \clock_1hz_process:scaler[22]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[22]~1_combout  = (\clock_1hz_process:scaler[22]~q  & (\clock_1hz_process:scaler[21]~2  $ (GND))) # (!\clock_1hz_process:scaler[22]~q  & (!\clock_1hz_process:scaler[21]~2  & VCC))
+// \clock_1hz_process:scaler[22]~2  = CARRY((\clock_1hz_process:scaler[22]~q  & !\clock_1hz_process:scaler[21]~2 ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[22]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[21]~2 ),
+	.combout(\clock_1hz_process:scaler[22]~1_combout ),
+	.cout(\clock_1hz_process:scaler[22]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[22]~1 .lut_mask = 16'hC30C;
+defparam \clock_1hz_process:scaler[22]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N15
+dffeas \clock_1hz_process:scaler[22] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[22]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[22]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[22] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[22] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N16
+cycloneive_lcell_comb \clock_1hz_process:scaler[23]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[23]~1_combout  = (\clock_1hz_process:scaler[23]~q  & (!\clock_1hz_process:scaler[22]~2 )) # (!\clock_1hz_process:scaler[23]~q  & ((\clock_1hz_process:scaler[22]~2 ) # (GND)))
+// \clock_1hz_process:scaler[23]~2  = CARRY((!\clock_1hz_process:scaler[22]~2 ) # (!\clock_1hz_process:scaler[23]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[23]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[22]~2 ),
+	.combout(\clock_1hz_process:scaler[23]~1_combout ),
+	.cout(\clock_1hz_process:scaler[23]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[23]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[23]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N17
+dffeas \clock_1hz_process:scaler[23] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[23]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[23]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[23] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[23] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N18
+cycloneive_lcell_comb \clock_1hz_process:scaler[24]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[24]~1_combout  = (\clock_1hz_process:scaler[24]~q  & (\clock_1hz_process:scaler[23]~2  $ (GND))) # (!\clock_1hz_process:scaler[24]~q  & (!\clock_1hz_process:scaler[23]~2  & VCC))
+// \clock_1hz_process:scaler[24]~2  = CARRY((\clock_1hz_process:scaler[24]~q  & !\clock_1hz_process:scaler[23]~2 ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[24]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[23]~2 ),
+	.combout(\clock_1hz_process:scaler[24]~1_combout ),
+	.cout(\clock_1hz_process:scaler[24]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[24]~1 .lut_mask = 16'hC30C;
+defparam \clock_1hz_process:scaler[24]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N19
+dffeas \clock_1hz_process:scaler[24] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[24]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[24]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[24] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[24] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N20
+cycloneive_lcell_comb \clock_1hz_process:scaler[25]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[25]~1_combout  = (\clock_1hz_process:scaler[25]~q  & (!\clock_1hz_process:scaler[24]~2 )) # (!\clock_1hz_process:scaler[25]~q  & ((\clock_1hz_process:scaler[24]~2 ) # (GND)))
+// \clock_1hz_process:scaler[25]~2  = CARRY((!\clock_1hz_process:scaler[24]~2 ) # (!\clock_1hz_process:scaler[25]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[25]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[24]~2 ),
+	.combout(\clock_1hz_process:scaler[25]~1_combout ),
+	.cout(\clock_1hz_process:scaler[25]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[25]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[25]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N21
+dffeas \clock_1hz_process:scaler[25] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[25]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[25]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[25] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[25] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N22
+cycloneive_lcell_comb \clock_1hz_process:scaler[26]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[26]~1_combout  = (\clock_1hz_process:scaler[26]~q  & (\clock_1hz_process:scaler[25]~2  $ (GND))) # (!\clock_1hz_process:scaler[26]~q  & (!\clock_1hz_process:scaler[25]~2  & VCC))
+// \clock_1hz_process:scaler[26]~2  = CARRY((\clock_1hz_process:scaler[26]~q  & !\clock_1hz_process:scaler[25]~2 ))
+
+	.dataa(\clock_1hz_process:scaler[26]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[25]~2 ),
+	.combout(\clock_1hz_process:scaler[26]~1_combout ),
+	.cout(\clock_1hz_process:scaler[26]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[26]~1 .lut_mask = 16'hA50A;
+defparam \clock_1hz_process:scaler[26]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N23
+dffeas \clock_1hz_process:scaler[26] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[26]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[26]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[26] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[26] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N24
+cycloneive_lcell_comb \clock_1hz_process:scaler[27]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[27]~1_combout  = (\clock_1hz_process:scaler[27]~q  & (!\clock_1hz_process:scaler[26]~2 )) # (!\clock_1hz_process:scaler[27]~q  & ((\clock_1hz_process:scaler[26]~2 ) # (GND)))
+// \clock_1hz_process:scaler[27]~2  = CARRY((!\clock_1hz_process:scaler[26]~2 ) # (!\clock_1hz_process:scaler[27]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[27]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[26]~2 ),
+	.combout(\clock_1hz_process:scaler[27]~1_combout ),
+	.cout(\clock_1hz_process:scaler[27]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[27]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[27]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N25
+dffeas \clock_1hz_process:scaler[27] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[27]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[27]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[27] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[27] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N26
+cycloneive_lcell_comb \clock_1hz_process:scaler[28]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[28]~1_combout  = (\clock_1hz_process:scaler[28]~q  & (\clock_1hz_process:scaler[27]~2  $ (GND))) # (!\clock_1hz_process:scaler[28]~q  & (!\clock_1hz_process:scaler[27]~2  & VCC))
+// \clock_1hz_process:scaler[28]~2  = CARRY((\clock_1hz_process:scaler[28]~q  & !\clock_1hz_process:scaler[27]~2 ))
+
+	.dataa(\clock_1hz_process:scaler[28]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[27]~2 ),
+	.combout(\clock_1hz_process:scaler[28]~1_combout ),
+	.cout(\clock_1hz_process:scaler[28]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[28]~1 .lut_mask = 16'hA50A;
+defparam \clock_1hz_process:scaler[28]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N27
+dffeas \clock_1hz_process:scaler[28] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[28]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[28]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[28] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[28] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N28
+cycloneive_lcell_comb \clock_1hz_process:scaler[29]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[29]~1_combout  = (\clock_1hz_process:scaler[29]~q  & (!\clock_1hz_process:scaler[28]~2 )) # (!\clock_1hz_process:scaler[29]~q  & ((\clock_1hz_process:scaler[28]~2 ) # (GND)))
+// \clock_1hz_process:scaler[29]~2  = CARRY((!\clock_1hz_process:scaler[28]~2 ) # (!\clock_1hz_process:scaler[29]~q ))
+
+	.dataa(gnd),
+	.datab(\clock_1hz_process:scaler[29]~q ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\clock_1hz_process:scaler[28]~2 ),
+	.combout(\clock_1hz_process:scaler[29]~1_combout ),
+	.cout(\clock_1hz_process:scaler[29]~2 ));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[29]~1 .lut_mask = 16'h3C3F;
+defparam \clock_1hz_process:scaler[29]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N29
+dffeas \clock_1hz_process:scaler[29] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[29]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[29]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[29] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[29] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y24_N30
+cycloneive_lcell_comb \clock_1hz_process:scaler[30]~1 (
+// Equation(s):
+// \clock_1hz_process:scaler[30]~1_combout  = \clock_1hz_process:scaler[30]~q  $ (!\clock_1hz_process:scaler[29]~2 )
+
+	.dataa(\clock_1hz_process:scaler[30]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\clock_1hz_process:scaler[29]~2 ),
+	.combout(\clock_1hz_process:scaler[30]~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[30]~1 .lut_mask = 16'hA5A5;
+defparam \clock_1hz_process:scaler[30]~1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X36_Y24_N31
+dffeas \clock_1hz_process:scaler[30] (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:scaler[30]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\LessThan0~10_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:scaler[30]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:scaler[30] .is_wysiwyg = "true";
+defparam \clock_1hz_process:scaler[30] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y24_N0
+cycloneive_lcell_comb \LessThan0~9 (
+// Equation(s):
+// \LessThan0~9_combout  = (!\clock_1hz_process:scaler[25]~q  & (!\clock_1hz_process:scaler[27]~q  & (!\clock_1hz_process:scaler[28]~q  & !\clock_1hz_process:scaler[26]~q )))
+
+	.dataa(\clock_1hz_process:scaler[25]~q ),
+	.datab(\clock_1hz_process:scaler[27]~q ),
+	.datac(\clock_1hz_process:scaler[28]~q ),
+	.datad(\clock_1hz_process:scaler[26]~q ),
+	.cin(gnd),
+	.combout(\LessThan0~9_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~9 .lut_mask = 16'h0001;
+defparam \LessThan0~9 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N8
+cycloneive_lcell_comb \LessThan0~0 (
+// Equation(s):
+// \LessThan0~0_combout  = ((!\clock_1hz_process:scaler[22]~q ) # (!\clock_1hz_process:scaler[21]~q )) # (!\clock_1hz_process:scaler[20]~q )
+
+	.dataa(\clock_1hz_process:scaler[20]~q ),
+	.datab(gnd),
+	.datac(\clock_1hz_process:scaler[21]~q ),
+	.datad(\clock_1hz_process:scaler[22]~q ),
+	.cin(gnd),
+	.combout(\LessThan0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~0 .lut_mask = 16'h5FFF;
+defparam \LessThan0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N18
+cycloneive_lcell_comb \LessThan0~1 (
+// Equation(s):
+// \LessThan0~1_combout  = (((!\clock_1hz_process:scaler[17]~q  & !\clock_1hz_process:scaler[16]~q )) # (!\clock_1hz_process:scaler[19]~q )) # (!\clock_1hz_process:scaler[18]~q )
+
+	.dataa(\clock_1hz_process:scaler[17]~q ),
+	.datab(\clock_1hz_process:scaler[18]~q ),
+	.datac(\clock_1hz_process:scaler[16]~q ),
+	.datad(\clock_1hz_process:scaler[19]~q ),
+	.cin(gnd),
+	.combout(\LessThan0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~1 .lut_mask = 16'h37FF;
+defparam \LessThan0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N28
+cycloneive_lcell_comb \LessThan0~4 (
+// Equation(s):
+// \LessThan0~4_combout  = (!\clock_1hz_process:scaler[9]~q  & (!\clock_1hz_process:scaler[10]~q  & (!\clock_1hz_process:scaler[8]~q  & !\clock_1hz_process:scaler[7]~q )))
+
+	.dataa(\clock_1hz_process:scaler[9]~q ),
+	.datab(\clock_1hz_process:scaler[10]~q ),
+	.datac(\clock_1hz_process:scaler[8]~q ),
+	.datad(\clock_1hz_process:scaler[7]~q ),
+	.cin(gnd),
+	.combout(\LessThan0~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~4 .lut_mask = 16'h0001;
+defparam \LessThan0~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N14
+cycloneive_lcell_comb \LessThan0~5 (
+// Equation(s):
+// \LessThan0~5_combout  = (((!\clock_1hz_process:scaler[12]~q ) # (!\clock_1hz_process:scaler[11]~q )) # (!\clock_1hz_process:scaler[13]~q )) # (!\clock_1hz_process:scaler[14]~q )
+
+	.dataa(\clock_1hz_process:scaler[14]~q ),
+	.datab(\clock_1hz_process:scaler[13]~q ),
+	.datac(\clock_1hz_process:scaler[11]~q ),
+	.datad(\clock_1hz_process:scaler[12]~q ),
+	.cin(gnd),
+	.combout(\LessThan0~5_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~5 .lut_mask = 16'h7FFF;
+defparam \LessThan0~5 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X36_Y25_N0
+cycloneive_lcell_comb \LessThan0~2 (
+// Equation(s):
+// \LessThan0~2_combout  = (((!\clock_1hz_process:scaler[0]~q ) # (!\clock_1hz_process:scaler[3]~q )) # (!\clock_1hz_process:scaler[1]~q )) # (!\clock_1hz_process:scaler[2]~q )
+
+	.dataa(\clock_1hz_process:scaler[2]~q ),
+	.datab(\clock_1hz_process:scaler[1]~q ),
+	.datac(\clock_1hz_process:scaler[3]~q ),
+	.datad(\clock_1hz_process:scaler[0]~q ),
+	.cin(gnd),
+	.combout(\LessThan0~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~2 .lut_mask = 16'h7FFF;
+defparam \LessThan0~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N16
+cycloneive_lcell_comb \LessThan0~3 (
+// Equation(s):
+// \LessThan0~3_combout  = ((\LessThan0~2_combout ) # (!\clock_1hz_process:scaler[4]~q )) # (!\clock_1hz_process:scaler[5]~q )
+
+	.dataa(\clock_1hz_process:scaler[5]~q ),
+	.datab(\clock_1hz_process:scaler[4]~q ),
+	.datac(gnd),
+	.datad(\LessThan0~2_combout ),
+	.cin(gnd),
+	.combout(\LessThan0~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~3 .lut_mask = 16'hFF77;
+defparam \LessThan0~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N24
+cycloneive_lcell_comb \LessThan0~6 (
+// Equation(s):
+// \LessThan0~6_combout  = (\LessThan0~5_combout ) # ((!\clock_1hz_process:scaler[6]~q  & (\LessThan0~4_combout  & \LessThan0~3_combout )))
+
+	.dataa(\clock_1hz_process:scaler[6]~q ),
+	.datab(\LessThan0~4_combout ),
+	.datac(\LessThan0~5_combout ),
+	.datad(\LessThan0~3_combout ),
+	.cin(gnd),
+	.combout(\LessThan0~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~6 .lut_mask = 16'hF4F0;
+defparam \LessThan0~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N2
+cycloneive_lcell_comb \LessThan0~7 (
+// Equation(s):
+// \LessThan0~7_combout  = (\LessThan0~1_combout ) # ((!\clock_1hz_process:scaler[17]~q  & (!\clock_1hz_process:scaler[15]~q  & \LessThan0~6_combout )))
+
+	.dataa(\clock_1hz_process:scaler[17]~q ),
+	.datab(\LessThan0~1_combout ),
+	.datac(\clock_1hz_process:scaler[15]~q ),
+	.datad(\LessThan0~6_combout ),
+	.cin(gnd),
+	.combout(\LessThan0~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~7 .lut_mask = 16'hCDCC;
+defparam \LessThan0~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N20
+cycloneive_lcell_comb \LessThan0~8 (
+// Equation(s):
+// \LessThan0~8_combout  = ((!\clock_1hz_process:scaler[23]~q  & ((\LessThan0~0_combout ) # (\LessThan0~7_combout )))) # (!\clock_1hz_process:scaler[24]~q )
+
+	.dataa(\clock_1hz_process:scaler[24]~q ),
+	.datab(\clock_1hz_process:scaler[23]~q ),
+	.datac(\LessThan0~0_combout ),
+	.datad(\LessThan0~7_combout ),
+	.cin(gnd),
+	.combout(\LessThan0~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~8 .lut_mask = 16'h7775;
+defparam \LessThan0~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N30
+cycloneive_lcell_comb \LessThan0~10 (
+// Equation(s):
+// \LessThan0~10_combout  = (\clock_1hz_process:scaler[30]~q ) # (((\clock_1hz_process:scaler[29]~q ) # (!\LessThan0~8_combout )) # (!\LessThan0~9_combout ))
+
+	.dataa(\clock_1hz_process:scaler[30]~q ),
+	.datab(\LessThan0~9_combout ),
+	.datac(\clock_1hz_process:scaler[29]~q ),
+	.datad(\LessThan0~8_combout ),
+	.cin(gnd),
+	.combout(\LessThan0~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~10 .lut_mask = 16'hFBFF;
+defparam \LessThan0~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X35_Y25_N6
+cycloneive_lcell_comb \clock_1hz_process:pulse~0 (
+// Equation(s):
+// \clock_1hz_process:pulse~0_combout  = \LessThan0~10_combout  $ (\clock_1hz_process:pulse~q )
+
+	.dataa(\LessThan0~10_combout ),
+	.datab(gnd),
+	.datac(\clock_1hz_process:pulse~q ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\clock_1hz_process:pulse~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \clock_1hz_process:pulse~0 .lut_mask = 16'h5A5A;
+defparam \clock_1hz_process:pulse~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X35_Y25_N7
+dffeas \clock_1hz_process:pulse (
+	.clk(\clk_50MHz~inputclkctrl_outclk ),
+	.d(\clock_1hz_process:pulse~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clock_1hz_process:pulse~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clock_1hz_process:pulse .is_wysiwyg = "true";
+defparam \clock_1hz_process:pulse .power_up = "low";
+// synopsys translate_on
+
+assign tick_out = \tick_out~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_H2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_F16,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

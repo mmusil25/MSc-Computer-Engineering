@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/Question1
+Etest_bench_for_decrementer
+Z0 w1644670840
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 11 numeric_bit 0 22 d<O?S;AIQfOzoHU3FDK]23
+Z3 dC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q2
+Z4 8C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q2/test_bench_for_decrementer.vhd
+Z5 FC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q2/test_bench_for_decrementer.vhd
+l0
+L4
+V765:>:o4:MTj<FgnCz_Ih1
+!s100 <NFRA^1Yla=NKFXm8L^km3
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1644670843
+!i10b 1
+Z8 !s108 1644670843.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q2/test_bench_for_decrementer.vhd|
+Z10 !s107 C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q2/test_bench_for_decrementer.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+DEx4 work 26 test_bench_for_decrementer 0 22 765:>:o4:MTj<FgnCz_Ih1
+l29
+L7
+VM8U?Li@;NW=2<GN^j_?@72
+!s100 jS=D=h;Qm3ZW_gMIU6Hgd1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etest_bench_for_parity_checker
+Z13 w1644756331
+R1
+Z14 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R3
+Z15 8C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q3/eight_bit_even_parity_checker.vhd
+Z16 FC:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q3/eight_bit_even_parity_checker.vhd
+l0
+L8
+VZleQdJ9Ai1j]O`Qd7N_zz0
+!s100 cDVY4i=3Q9bj:oef09jOj3
+R6
+32
+Z17 !s110 1644756341
+!i10b 1
+Z18 !s108 1644756341.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q3/eight_bit_even_parity_checker.vhd|
+Z20 !s107 C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/Module 6/homework/q3/eight_bit_even_parity_checker.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R14
+Z21 DEx4 work 29 test_bench_for_parity_checker 0 22 ZleQdJ9Ai1j]O`Qd7N_zz0
+l51
+L11
+VJKBh90]:lWXWIo;PBUa_]2
+!s100 :X_Q0?`]hZ`=kEmcaR9EU3
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12

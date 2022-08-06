@@ -1,0 +1,28 @@
+|PWMLED
+clk_50MHz => clk_tick.CLK
+clk_50MHz => scaler[0].CLK
+clk_50MHz => scaler[1].CLK
+clk_50MHz => scaler[2].CLK
+clk_50MHz => scaler[3].CLK
+clk_50MHz => scaler[4].CLK
+clk_50MHz => scaler[5].CLK
+clk_50MHz => scaler[6].CLK
+clk_50MHz => scaler[7].CLK
+clk_50MHz => scaler[8].CLK
+clk_50MHz => scaler[9].CLK
+clk_50MHz => scaler[10].CLK
+clk_50MHz => scaler[11].CLK
+up_btn => up_btn_state.DATAIN
+up_btn => button_process.IN1
+dn_btn => dn_btn_state.DATAIN
+dn_btn => button_process.IN1
+pwm_leds[0] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+pwm_leds[1] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+pwm_leds[2] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+pwm_leds[3] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+pwm_leds[4] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+pwm_leds[5] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+pwm_leds[6] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+pwm_leds[7] << pwm_signal.DB_MAX_OUTPUT_PORT_TYPE
+
+

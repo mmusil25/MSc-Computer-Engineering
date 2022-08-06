@@ -1,0 +1,12 @@
+-- Homework 8 Question 4p1 
+-- Design of Digital Circuits
+-- Mark Musil
+
+-- Translate the following code into an if-then-else statement: 
+
+transmit <= signal_a when state = idle else
+			signal_b when state = incoming else
+			signal_c when state = outgoing else
+			signal_d;
+			
+if state = idle 

@@ -1,0 +1,719 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  c:/intelfpga_lite/18.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/18.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  Blinker_Mark_Musil.vo
+Sim SDF file          :  Blinker_Mark_Musil__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/18.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Probing transcript
+ModelSim-Altera Info: # Reading C:/intelFPGA_lite/18.1/ModelSimFolder/modelsim_ase/tcl/vsim/pref.tcl
+ModelSim-Altera Info: # do Blinker_Mark_Musil_run_msim_gate_verilog.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA_lite/18.1/ModelSimFolder/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {Blinker_Mark_Musil.vo}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # Start time: 08:34:16 on Feb 03,2022
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." Blinker_Mark_Musil.vo 
+ModelSim-Altera Info: # -- Compiling module Blinker_m4
+ModelSim-Altera Info: # -- Compiling module hard_block
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	Blinker_m4
+ModelSim-Altera Info: # End time: 08:34:16 on Feb 03,2022, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: vsim work.Blinker_m4
+ModelSim-Altera Info: # vsim work.Blinker_m4 
+ModelSim-Altera Info: # Start time: 08:34:21 on Feb 03,2022
+ModelSim-Altera Info: # Loading work.Blinker_m4
+ModelSim-Altera Info: # Loading work.hard_block
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(173): Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(186): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(196): Instantiation of 'cycloneive_clkctrl' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(209): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(227): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(246): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(264): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(283): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(301): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(320): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(338): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(357): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(375): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(394): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(412): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(431): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(449): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(468): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(486): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(505): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(523): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(542): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(560): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(579): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(597): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(616): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(634): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(653): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(671): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(690): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(708): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(727): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(745): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(764): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(782): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(801): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(819): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(838): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(856): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(875): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(893): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(912): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(930): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(949): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(967): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(986): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1004): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1023): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1041): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1060): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1078): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1097): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1115): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1134): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1152): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1171): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1189): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1208): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1226): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1245): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1263): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1282): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1300): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1319): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1336): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1355): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1372): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1389): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1406): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1423): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1440): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1457): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1474): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1491): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1508): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1525): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1542): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1559): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Info: # Error loading design
+ModelSim-Altera Info: # End time: 08:34:22 on Feb 03,2022, Elapsed time: 0:00:01
+ModelSim-Altera Info: # Errors: 78, Warnings: 0
+ModelSim-Altera Info: vsim work.Blinker_m4
+ModelSim-Altera Info: # vsim work.Blinker_m4 
+ModelSim-Altera Info: # Start time: 08:34:24 on Feb 03,2022
+ModelSim-Altera Info: # Loading work.Blinker_m4
+ModelSim-Altera Info: # Loading work.hard_block
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(173): Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(186): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(196): Instantiation of 'cycloneive_clkctrl' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(209): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(227): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(246): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(264): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(283): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(301): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(320): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(338): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(357): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(375): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(394): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(412): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(431): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(449): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(468): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(486): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(505): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(523): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(542): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(560): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(579): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(597): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(616): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(634): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(653): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(671): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(690): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(708): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(727): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(745): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(764): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(782): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(801): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(819): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(838): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(856): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(875): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(893): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(912): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(930): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(949): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(967): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(986): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1004): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1023): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1041): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1060): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1078): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1097): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1115): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1134): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1152): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1171): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1189): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1208): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1226): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1245): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1263): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1282): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1300): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1319): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1336): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1355): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1372): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1389): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1406): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1423): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1440): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1457): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1474): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1491): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1508): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1525): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1542): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Error: # ** Error: (vsim-3033) Blinker_Mark_Musil.vo(1559): Instantiation of 'dffeas' failed. The design unit was not found.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /Blinker_m4 File: Blinker_Mark_Musil.vo
+ModelSim-Altera Info: #         Searched libraries:
+ModelSim-Altera Info: #             C:/Users/musil/OneDrive - Ohio University/First Year/Winter/Design of Digital Circuits/m4/lab4/Blinker/simulation/modelsim/gate_work
+ModelSim-Altera Info: # Error loading design
+ModelSim-Altera Info: # End time: 08:34:25 on Feb 03,2022, Elapsed time: 0:00:01
+ModelSim-Altera Info: # Errors: 78, Warnings: 0
+Error: Errors encountered while running modelsim do file
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    (procedure "launch_sim" line 1)
+    invoked from within
+"launch_sim launch_args_hash"
+    ("eval" body line 1)
+    invoked from within
+"eval launch_sim launch_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+                set savedCode $::errorCode
+                set savedInfo $::errorInfo
+                error $result $..."
+    invoked from within
+"if [catch {eval launch_sim launch_args_hash} result ] {
+            set status 1
+            if [ info exists ::errorCode ] {
+                set save..."
+    (procedure "run_sim" line 74)
+    invoked from within
+"run_sim run_sim_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+            set savedCode $::errorCode
+            set savedInfo $::errorInfo
+            error "$result" $savedInfo ..."
+    (procedure "run_eda_simulation_tool" line 334)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"

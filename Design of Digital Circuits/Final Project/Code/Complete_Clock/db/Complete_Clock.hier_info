@@ -1,0 +1,236 @@
+|Complete_Clock
+second_blink <= TickGenerator:inst9.tick_out
+Clk_50MHz => TickGenerator:inst9.clk_50mhz
+Clk_50MHz => ScanClock:inst10.clk_50mhz
+digit_vector[0] <= <GND>
+digit_vector[1] <= <GND>
+digit_vector[2] <= <GND>
+digit_vector[3] <= <GND>
+display_out[0] <= <GND>
+display_out[1] <= <GND>
+display_out[2] <= <GND>
+display_out[3] <= <GND>
+display_out[4] <= <GND>
+display_out[5] <= <GND>
+display_out[6] <= <GND>
+
+
+|Complete_Clock|TickGenerator:inst9
+clk_50mhz => tick_out~reg0.CLK
+clk_50mhz => tmp.CLK
+clk_50mhz => count[0].CLK
+clk_50mhz => count[1].CLK
+clk_50mhz => count[2].CLK
+clk_50mhz => count[3].CLK
+clk_50mhz => count[4].CLK
+clk_50mhz => count[5].CLK
+clk_50mhz => count[6].CLK
+clk_50mhz => count[7].CLK
+clk_50mhz => count[8].CLK
+clk_50mhz => count[9].CLK
+clk_50mhz => count[10].CLK
+clk_50mhz => count[11].CLK
+clk_50mhz => count[12].CLK
+clk_50mhz => count[13].CLK
+clk_50mhz => count[14].CLK
+clk_50mhz => count[15].CLK
+clk_50mhz => count[16].CLK
+clk_50mhz => count[17].CLK
+clk_50mhz => count[18].CLK
+clk_50mhz => count[19].CLK
+clk_50mhz => count[20].CLK
+clk_50mhz => count[21].CLK
+clk_50mhz => count[22].CLK
+clk_50mhz => count[23].CLK
+clk_50mhz => count[24].CLK
+clk_50mhz => count[25].CLK
+clk_50mhz => count[26].CLK
+clk_50mhz => count[27].CLK
+clk_50mhz => count[28].CLK
+clk_50mhz => count[29].CLK
+clk_50mhz => count[30].CLK
+clk_50mhz => count[31].CLK
+tick_out <= tick_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete_Clock|DisplayDriver:inst
+scan_clk => internal_digit_vector[0].CLK
+scan_clk => internal_digit_vector[1].CLK
+scan_clk => internal_digit_vector[2].CLK
+scan_clk => internal_digit_vector[3].CLK
+scan_clk => digit_to_map[0].CLK
+scan_clk => digit_to_map[1].CLK
+scan_clk => digit_to_map[2].CLK
+scan_clk => digit_to_map[3].CLK
+scan_clk => scan_counter[0].CLK
+scan_clk => scan_counter[1].CLK
+minute_ones[0] => Mux3.IN0
+minute_ones[1] => Mux2.IN0
+minute_ones[2] => Mux1.IN0
+minute_ones[3] => Mux0.IN0
+minute_tens[0] => Mux3.IN1
+minute_tens[1] => Mux2.IN1
+minute_tens[2] => Mux1.IN1
+minute_tens[3] => Mux0.IN1
+hour_ones[0] => Mux3.IN2
+hour_ones[1] => Mux2.IN2
+hour_ones[2] => Mux1.IN2
+hour_ones[3] => Mux0.IN2
+hour_tens[0] => Mux3.IN3
+hour_tens[1] => Mux2.IN3
+hour_tens[2] => Mux1.IN3
+hour_tens[3] => Mux0.IN3
+display_out[0] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+display_out[1] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+display_out[2] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+display_out[3] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+display_out[4] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+display_out[5] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+display_out[6] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+digit_vector[0] <= internal_digit_vector[0].DB_MAX_OUTPUT_PORT_TYPE
+digit_vector[1] <= internal_digit_vector[1].DB_MAX_OUTPUT_PORT_TYPE
+digit_vector[2] <= internal_digit_vector[2].DB_MAX_OUTPUT_PORT_TYPE
+digit_vector[3] <= internal_digit_vector[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete_Clock|ScanClock:inst10
+clk_50mhz => scan_out~reg0.CLK
+clk_50mhz => tmp.CLK
+clk_50mhz => count[0].CLK
+clk_50mhz => count[1].CLK
+clk_50mhz => count[2].CLK
+clk_50mhz => count[3].CLK
+clk_50mhz => count[4].CLK
+clk_50mhz => count[5].CLK
+clk_50mhz => count[6].CLK
+clk_50mhz => count[7].CLK
+clk_50mhz => count[8].CLK
+clk_50mhz => count[9].CLK
+clk_50mhz => count[10].CLK
+clk_50mhz => count[11].CLK
+clk_50mhz => count[12].CLK
+clk_50mhz => count[13].CLK
+clk_50mhz => count[14].CLK
+clk_50mhz => count[15].CLK
+clk_50mhz => count[16].CLK
+clk_50mhz => count[17].CLK
+clk_50mhz => count[18].CLK
+clk_50mhz => count[19].CLK
+clk_50mhz => count[20].CLK
+clk_50mhz => count[21].CLK
+clk_50mhz => count[22].CLK
+clk_50mhz => count[23].CLK
+clk_50mhz => count[24].CLK
+clk_50mhz => count[25].CLK
+clk_50mhz => count[26].CLK
+clk_50mhz => count[27].CLK
+clk_50mhz => count[28].CLK
+clk_50mhz => count[29].CLK
+clk_50mhz => count[30].CLK
+clk_50mhz => count[31].CLK
+scan_out <= scan_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete_Clock|DoubleDabble:inst5
+binIN[0] => ~NO_FANOUT~
+binIN[1] => ~NO_FANOUT~
+binIN[2] => ~NO_FANOUT~
+binIN[3] => ~NO_FANOUT~
+binIN[4] => ~NO_FANOUT~
+binIN[5] => ~NO_FANOUT~
+ones[0] <= ones[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= ones[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= ones[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= ones[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[0] <= tens[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= tens[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= tens[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= tens[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete_Clock|HourGenerator:inst2
+hour_in => hour_count[0].CLK
+hour_in => hour_count[1].CLK
+hour_in => hour_count[2].CLK
+hour_in => hour_count[3].CLK
+hour_in => hour_count[4].CLK
+hour_in => hour_count[5].CLK
+hour_in => hour[0]~reg0.CLK
+hour_in => hour[1]~reg0.CLK
+hour_in => hour[2]~reg0.CLK
+hour_in => hour[3]~reg0.CLK
+hour_in => hour[4]~reg0.CLK
+hour_in => hour[5]~reg0.CLK
+hour[0] <= hour[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[1] <= hour[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[2] <= hour[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[3] <= hour[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[4] <= hour[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[5] <= hour[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete_Clock|MinuteGenerator:inst6
+minute_in => hour_out_tmp.CLK
+minute_in => minute_count[0].CLK
+minute_in => minute_count[1].CLK
+minute_in => minute_count[2].CLK
+minute_in => minute_count[3].CLK
+minute_in => minute_count[4].CLK
+minute_in => minute_count[5].CLK
+minute_in => hour_out~reg0.CLK
+minute_in => minute[0]~reg0.CLK
+minute_in => minute[1]~reg0.CLK
+minute_in => minute[2]~reg0.CLK
+minute_in => minute[3]~reg0.CLK
+minute_in => minute[4]~reg0.CLK
+minute_in => minute[5]~reg0.CLK
+hour_out <= hour_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[0] <= minute[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[1] <= minute[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[2] <= minute[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[3] <= minute[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[4] <= minute[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[5] <= minute[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete_Clock|SecondGenerator:inst8
+tick_in => minute_out_tmp.CLK
+tick_in => second_count[0].CLK
+tick_in => second_count[1].CLK
+tick_in => second_count[2].CLK
+tick_in => second_count[3].CLK
+tick_in => second_count[4].CLK
+tick_in => second_count[5].CLK
+tick_in => minute_out~reg0.CLK
+tick_in => second[0]~reg0.CLK
+tick_in => second[1]~reg0.CLK
+tick_in => second[2]~reg0.CLK
+tick_in => second[3]~reg0.CLK
+tick_in => second[4]~reg0.CLK
+tick_in => second[5]~reg0.CLK
+minute_out <= minute_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[0] <= second[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[1] <= second[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[2] <= second[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[3] <= second[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[4] <= second[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[5] <= second[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete_Clock|DoubleDabble:inst4
+binIN[0] => ~NO_FANOUT~
+binIN[1] => ~NO_FANOUT~
+binIN[2] => ~NO_FANOUT~
+binIN[3] => ~NO_FANOUT~
+binIN[4] => ~NO_FANOUT~
+binIN[5] => ~NO_FANOUT~
+ones[0] <= ones[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= ones[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= ones[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= ones[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[0] <= tens[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= tens[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= tens[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= tens[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

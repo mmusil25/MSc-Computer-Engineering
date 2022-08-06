@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "minute_out",
+					"strict" : false
+				},
+				{
+					"name" : "second[0]",
+					"strict" : false
+				},
+				{
+					"name" : "second[1]",
+					"strict" : false
+				},
+				{
+					"name" : "second[2]",
+					"strict" : false
+				},
+				{
+					"name" : "second[3]",
+					"strict" : false
+				},
+				{
+					"name" : "second[4]",
+					"strict" : false
+				},
+				{
+					"name" : "second[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tick_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

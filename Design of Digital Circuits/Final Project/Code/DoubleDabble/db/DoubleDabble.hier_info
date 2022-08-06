@@ -1,0 +1,17 @@
+|DoubleDabble
+binIN[0] => ~NO_FANOUT~
+binIN[1] => ~NO_FANOUT~
+binIN[2] => ~NO_FANOUT~
+binIN[3] => ~NO_FANOUT~
+binIN[4] => ~NO_FANOUT~
+binIN[5] => ~NO_FANOUT~
+ones[0] <= ones[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= ones[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= ones[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= ones[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[0] <= tens[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= tens[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= tens[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= tens[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

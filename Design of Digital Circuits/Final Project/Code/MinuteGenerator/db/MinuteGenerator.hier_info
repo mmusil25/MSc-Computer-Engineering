@@ -1,0 +1,24 @@
+|MinuteGenerator
+minute_in => hour_out_tmp.CLK
+minute_in => minute_count[0].CLK
+minute_in => minute_count[1].CLK
+minute_in => minute_count[2].CLK
+minute_in => minute_count[3].CLK
+minute_in => minute_count[4].CLK
+minute_in => minute_count[5].CLK
+minute_in => hour_out~reg0.CLK
+minute_in => minute[0]~reg0.CLK
+minute_in => minute[1]~reg0.CLK
+minute_in => minute[2]~reg0.CLK
+minute_in => minute[3]~reg0.CLK
+minute_in => minute[4]~reg0.CLK
+minute_in => minute[5]~reg0.CLK
+hour_out <= hour_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[0] <= minute[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[1] <= minute[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[2] <= minute[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[3] <= minute[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[4] <= minute[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[5] <= minute[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

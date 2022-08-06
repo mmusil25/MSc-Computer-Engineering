@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "green_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "green_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "green_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "green_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "green_leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "green_leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "green_leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "green_leds[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_btn",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

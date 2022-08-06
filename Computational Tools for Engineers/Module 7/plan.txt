@@ -1,0 +1,10 @@
+
+Goals
+
+* Create a function m-file with calling-routine-defined input arguments that is called by a driver program
+* Create customized 2d and 3d plots
+
+Reading and notes on the readings
+
+Sections of 9.1 and 9.2 from Chapter 9 of the Hahn and Valentine textbook.
+

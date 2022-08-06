@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OutputLogic",
+					"strict" : false
+				},
+				{
+					"name" : "Input_1B",
+					"strict" : false
+				},
+				{
+					"name" : "Input_1A",
+					"strict" : false
+				},
+				{
+					"name" : "Input_2A",
+					"strict" : false
+				},
+				{
+					"name" : "Input_2B",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

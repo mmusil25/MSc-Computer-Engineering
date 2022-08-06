@@ -1,0 +1,99 @@
+----------------------------------
+-- Library Declaration --
+----------------------------------
+-- Like any other programming language, we should declare libraries
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+----------------------------------
+-- Entity Declaration --
+----------------------------------
+-- Here we specify all input/output ports
+entity PWMLED is
+port(
+clk_50MHz : in std_logic ;
+up_btn : in std_logic;
+dn_btn : in std_logic;
+pwm_leds : out std_logic_vector(7 downto 0) := "00000000"
+);
+end PWMLED;
+----------------------------------
+-- Architecture Declaration --
+----------------------------------
+-- here we put the description code of the design
+architecture behave of PWMLED is
+-- data object declarations are placed in the declarative part of the architecture body
+	constant max : positive := 2500;
+	signal clk_1Hz : std_logic ;
+	signal scaler : integer range 0 to max := 0;
+	signal t_on : integer range 0 to 100 := 0;
+	signal top_cnt : integer := 100;
+	signal count : integer range 0 to 100 := 0;
+	signal pwm_signal : std_logic; 
+	signal up_btn_state : std_logic := '1'; 
+	signal dn_btn_state : std_logic := '1';
+	
+begin
+	--this process is used to scale down the 50MHz frequency to 50MHz/max i.e. 20KHz which is the 
+	-- frequency of our PWM waveform (it has to be high enough that the LEDs don't appear to blink)
+
+	clk_1Hz_process : process( clk_50MHz )
+	begin
+
+		if(rising_edge(clk_50MHz)) then 
+			if (scaler < max) then 
+				scaler <= scaler + 1 ;
+				clk_1Hz <= '0';
+			else
+				scaler <= 0;
+		clk_1Hz <= '1';
+			end if;
+		end if;
+	end process clk_1Hz_process;
+
+	-- This process is used to read pwm rate control buttons (up_btn and dn_btn) and set the duty 
+	-- cycle by setting the value of LED on time : t_on
+	button_process : process( clk_1Hz )
+	begin
+		if(rising_edge(clk_1Hz)) then
+			if(up_btn = '0' and up_btn_state = '1') then 
+				if (t_on < 100) then t_on <= t_on + 1; 
+				else 
+					t_on <= 100; 
+				end if; 
+			end if; 
+		up_btn_state <= up_btn; 
+		if(dn_btn = '0' and dn_btn_state = '1') then 
+			if (t_on > 0) then 
+				t_on <= t_on - 1; 
+			else 
+				t_on <= 0; 
+			end if; 
+		end if; 
+		
+		dn_btn_state <= dn_btn; 
+		end if;
+	end process button_process;
+-- This process is used to actually generate the PWM waveform
+ 
+ pwm_process : process( clk_1Hz )
+	begin
+	if (rising_edge(clk_1Hz)) then
+		if (t_on = 0) then 
+			pwm_signal <= '0';
+		elsif((count <= t_on) and (count < top_cnt)) then
+			pwm_signal <= '1';
+			count <= count + 1;
+		elsif ((count > t_on) and (count < top_cnt)) then
+			pwm_signal <= '0';
+			count <= count + 1;
+		else 
+		pwm_signal <= '0'; count <= 0;
+		end if;
+	end if;
+
+	for i in 7 downto 0 loop 
+		pwm_leds(i) <= pwm_signal;
+	end loop;
+ end process pwm_process;
+end behave;
